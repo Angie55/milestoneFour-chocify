@@ -1,3 +1,12 @@
 from django.test import TestCase
+from .models import Product
 
-# Create your tests here.
+
+class ProductTests(TestCase):
+    """
+    This test runs against the Product model
+    """
+
+    def test_str(self):
+        test_title = Product(title='Product title')
+        self.assertEqual(str(test_title), 'Product title')

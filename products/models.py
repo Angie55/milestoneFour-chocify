@@ -12,7 +12,7 @@ class Category(models.Model):
         verbose_name_plural = 'categories'
 
     def get_absolute_url(self):
-        return reverse('products_by_category', kwargs={'pk': self.id})
+        return reverse('products_by_category', args=[self.id])
 
     def __str__(self):
         return self.name
@@ -34,7 +34,7 @@ class Product(models.Model):
     image4 = models.ImageField(upload_to='images', blank=True, null=True)
 
     def get_absolute_url(self):
-        return reverse('products_detail', kwargs={'pk': self.id})
+        return reverse('products_detail', args=[self.id])
 
     def __str__(self):
-        return self.name
+        return self.title

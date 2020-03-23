@@ -20,9 +20,10 @@ class Category(models.Model):
 
 class Product(models.Model):
     category = models.ForeignKey(Category, null=True)
-    title = models.CharField(max_length=100, default='')
-    introduction = models.TextField(max_length=200)
-    description = models.TextField()
+    title = models.CharField(max_length=150, default='')
+    introduction = models.TextField(max_length=400)
+    details = models.TextField(default='')
+    ingredients = models.TextField(default='')
     price = models.DecimalField(max_digits=6, decimal_places=2)
     milk_choc = models.BooleanField(default=True)
     white_choc = models.BooleanField(default=False)

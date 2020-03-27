@@ -14,32 +14,78 @@
     <link rel="icon" type="image/png" href="">
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
+    <!-- Font awesome -->
+    <script src="https://kit.fontawesome.com/430085f686.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+    
+    <nav class="navbar navbar-expand-lg nav">
+        <a class="navbar-brand" href="{% url 'index' %}">Chocify</a>
+        <!--burger icon for small screen toggle menu-->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"><i class="fas fa-bars burger-icon"></i></span>
+        </button>
+        <!--main navbar links that are inline on a large screen and toggled on small screens-->
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <!--search icon-->
+                <li>
+                    <a class="nav-link nav-link-colour nav-icon" href="">
+                        <i class="fas fa-search" title="Search"></i>
+                    </a>
+                </li>
+                <!--category selection dropdown list-->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle nav-link-colour" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Shop
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item nav-link-colour" href="#">Shop All</a>
+                    <a class="dropdown-item nav-link-colour" href="#">Fruit</a>
+                    <a class="dropdown-item nav-link-colour" href="#">Vegetables</a>
+                    <a class="dropdown-item nav-link-colour" href="#">Meals</a>
+                    <a class="dropdown-item nav-link-colour" href="#">Romantic</a>
+                    <a class="dropdown-item nav-link-colour" href="#">Tools</a>
+                    <a class="dropdown-item nav-link-colour" href="#">Household items</a>
+                    </div>
+                </li>
+                <!--nav items that dispay depending on if the user is logged in or out-->
+                {% if user.is_authenticated %}
+                <li class="nav-item">
+                    <a class="nav-link nav-link-colour" href="{% url 'profile' %}">Profile></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-link-colour" href="{% url 'logout' %}">Logout</a>
+                </li>
+                {% else %}
+                <li class="nav-item">
+                    <a class="nav-link nav-link-colour" href="{% url 'login' %}">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-link-colour" href="{% url 'registration' %}">Register</a>
+                </li>
+            {% endif %}
+            </ul>
+            <!--shopping cart icon-->
+            <a class="nav-link nav-link-colour nav-icon" href="">
+                <i class="fas fa-shopping-basket" title="Cart"></i>
+            </a>
+        </div>
+    </nav>
+
     <h1>
         {% block page_heading %}{% endblock %}
     </h1>
 
-    <nav>
-        <ul>
-            {% if user.is_authenticated %}
-            <li><a href="{% url 'profile' %}">Profile</a></li>
-            <li><a href="{% url 'logout' %}">Logout</a></li>
-            {% else %}
-            <li><a href="{% url 'login' %}">Login</a></li>
-            <li><a href="{% url 'registration' %}">Register</a></li>
-            {% endif %}
-            <li><a href="#">Shop</a></li>
-            <li><a href="#">About</a></li>
-        </ul>
-    </nav>
 
-    <hr> {% if messages %}
+    {% if messages %}
     <div>
         {% for message in messages %} {{ message }} {% endfor %}
     </div>
-    {% endif %}{% block content %}{% endblock %}
+    {% endif %}
+    
+    {% block content %}{% endblock %}
 
     <!--Script tag for jQuery-->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

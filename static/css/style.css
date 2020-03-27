@@ -1,3 +1,27 @@
-body {
-    background-color: red;
+.nav {
+    border-bottom: 8px solid #43281e;
+} 
+
+.nav-link-colour {
+    color: #f09583;
+    margin-right: 20px;
+    transition: 0.5s;
+}
+
+.nav-link-colour:hover {
+    color: #43281e;
+}
+
+.navbar-toggler-icon {
+    color: #43281e;
+    margin-top: 10px;
+    font-size: 30px;
+}
+
+.navbar-toggler {
+    padding: 4px 0px;
+}
+
+.nav-icon {
+    font-size: 20px;
 }

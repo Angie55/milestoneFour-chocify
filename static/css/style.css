@@ -63,7 +63,14 @@ footer {
 }
 
 /*---------------------------------Media Queries mobile and tablet screen*/
-@media (max-width:720px) {
+@media (max-width:450px) {
     .sm-display-none {
         display: none;
+        }
+    .footer-third-section {
+        margin-left: 30px;
+        }
+    .social-links {
+        margin-top: 0px;
+        }
     }

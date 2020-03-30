@@ -27,6 +27,82 @@
     font-size: 20px;
 }
 
+/*--------------------------------- General*/
+.page-width-container {
+    max-width: 80%;
+}
+
+.page-headers {
+    text-align: center;
+    margin-top: 20px;
+    color: #f09583;
+}
+
+.button-colour {
+    background-color: #42C0FB;
+    color: white;
+}
+
+/*--------------------------------- All products page*/
+.product-img {
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+.row.row-flex {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.panel-default {
+    border-color: transparent;
+    padding: 0 10px;
+}
+
+.panel-body {
+    height: 100%;
+    border: 1px solid #ddd;
+}
+
+/*--------------------------------- View cart page*/
+.cart-page {
+    min-height: 80vh;
+    margin-bottom: 50px;
+}
+.cart-contents {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.cart-info {
+    margin-top: 30px;
+}
+
+.qty-input {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.cart-hr {
+    color: #ddd;
+}
+
+.pound-sign {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.checkout-btn {
+    background-color: #66CD00;
+    color: white;
+    margin-left: 20px;
+}
+
 /*--------------------------------- Footer*/
 
 footer {

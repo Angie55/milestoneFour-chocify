@@ -3,35 +3,35 @@
 {% load bootstrap_tags %}
 
 {% block content %}
-<div class="container-fluid page-width-container cart-page">
-    <h1 class="page-headers">Shopping basket</h1>
-    <div class="row cart-contents">
+<div class="container-fluid cart-width-container cart-page">
+    <h1 class="page-headers">Shopping cart</h1>
+    <div class="row row-flex cart-contents">
         {% for item in cart_items %}
-            <div class="col-3">
-                <div class="product-img" style="background-image: url('{{ MEDIA_URL }}{{ item.product.image1 }}')"></div>
-            </div>
-            <div class="col-5">
-                <h5 class="cart-info">{{ item.product.title }}</h5>
-            </div>
-            <div class="col-1">
-                <p class="cart-info"><i class="fas fa-pound-sign pound-sign"></i>{{ item.product.price }}</p>
-            </div>
-            <div class="col-3 cart-info">
-                <form class="form-inline" method="post" action="{% url 'adjust_cart' item.id %}">
-                    {% csrf_token %}
-                    <div class="form-group">
-                        <label for="exampleInputAmount" class="sr-only">New Qty</label>
-                        <div class="input-group">
-                            <div class="input-group-addon">Qty:</div>
-                            <input name="quantity" type="number" min="0" max="999" class="form-control qty-input" placeholder="{{item.quantity}}">
-                            <div class="input-group-addon"></div>
-                        </div>
+        <div class="col-12 col-md-2">
+            <div class="cart-img" style="background-image: url('{{ MEDIA_URL }}{{ item.product.image1 }}')"></div>
+        </div>
+        <div class="col-12 col-md-4">
+            <h5 class="cart-info">{{ item.product.title }}</h5>
+        </div>
+        <div class="col-12  col-md-2">
+            <p class="cart-info"><i class="fas fa-pound-sign pound-sign"></i>{{ item.product.price }}</p>
+        </div>
+        <div class="col-12 col-md-4 cart-info">
+            <form class="form-inline justify-content-center" method="post" action="{% url 'adjust_cart' item.id %}">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="exampleInputAmount" class="sr-only">New Qty</label>
+                    <div class="input-group">
+                        <div class="input-group-addon">Qty:</div>
+                        <input name="quantity" type="number" min="0" max="999" class="form-control qty-input" placeholder="{{item.quantity}}">
+                        <div class="input-group-addon"></div>
                     </div>
-                    <button type="submit" class="btn button-colour">Amend</button>
-                </form>
-            <hr class="cart-hr">
-            </div>
-    {% endfor %}
+                </div>
+                <button type="submit" class="btn button-colour"><i class="fas fa-check"></i></button>
+            </form>
+        </div>
+        <hr class="cart-hr">
+        {% endfor %} 
     </div>
 
     <div class="row justify-content-end">

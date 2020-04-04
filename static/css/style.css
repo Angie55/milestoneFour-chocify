@@ -48,40 +48,56 @@
     background-size: contain;
     background-position: center center;
     background-repeat: no-repeat;
+    border: 2px solid #f09583;
+    box-shadow: 9px 9px 10px -8px rgba(0,0,0,0.46);
+        -webkit-box-shadow: 9px 9px 10px -8px rgba(0,0,0,0.46);
+            -moz-box-shadow: 9px 9px 10px -8px rgba(0,0,0,0.46);
+    border-radius: 10px;
     width: 300px;
     height: 300px;
-    margin: 0 auto;
+    margin: 10px auto 20px;
 }
 
-.row.row-flex {
-    display: flex;
-    flex-wrap: wrap;
+.product-block {
+    
     margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 10px;
 }
 
-.panel-body {
-    height: 100%;
-    border: 2px solid #f09583;
+.product-block-content {
+    margin-left: 25px;
 }
 
-.product-panel-content {
-    text-align: center;
-}
-
-.product-panel-price {
+.product-block-price {
     color:#f09583;
     font-size: 1.25em;
+    margin-top: 10px;
 }
 
-.product-panel-add {
-    max-width: 80%;
-    margin: 0 auto 20px;
+.product-block-add {
+    margin-left: 25px;
 }
 
 .add-cart-input {
     margin-right: 20px;
     max-width: 20%;
 }
+
+.add-cart-btn {
+    background-color:#f09583;
+    color: white;
+    transition: 0.5s;
+}
+
+.add-cart-btn:hover {
+    background-color: #baa999;
+    color: white;
+}
+
+.pound-sign {
+    margin-right:5px;
+} 
 
 /*--------------------------------- View cart page*/
 .cart-page {
@@ -106,7 +122,7 @@
     color: #ddd;
 }
 
-.pound-sign {
+.cart-pound-sign {
     margin-left: 10px;
     margin-right: 10px;
 }

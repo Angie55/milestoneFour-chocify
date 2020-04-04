@@ -5,28 +5,29 @@
     <header>
         <h1 class="page-headers">Shop all</h1>
     </header>
-
-    <div class="row">
+    
+    <div class="row justify-content-center">
         {% for product in products %}
-            <div class="col-xs-12 col-md-4 col-xl-3 product-block">
+            <div class="col-xs-12 col-md-4 col-lg-3 card product-block">
+                    <img class="img-fluid product-img" src="{{ MEDIA_URL }}{{ product.image1 }}" alt=""> 
+                    
+                    <h5>{{ product.title }}</h5>
                 
-                    <div class="product-img" style="background-image: url('{{ MEDIA_URL }}{{ product.image1 }}')"></div>
-
-                    <h4 class="product-block-content">{{ product.title }}</h4>
-                
-                    <p class="product-block-content product-block-price"><i class="fas fa-pound-sign pound-sign"></i>{{ product.price }}</p>
+                    <p class="product-block-price"><i class="fas fa-pound-sign pound-sign"></i>{{ product.price }}</p>
                 
                     <form method="post" action="{% url 'add_to_cart' product.id %}">
                         {% csrf_token %}
-                        <div class="input-group product-block-add">
+                        <div class="input-group">
                             <input name="quantity" type="number" min="1" max="999" class="form-control add-cart-input" placeholder="Qty">
                             <span class="input-group-btn justify-content-left">
                                 <button class="btn add-cart-btn" type="submit">Add to cart</button>
                             </span>
                         </div>
                     </form>
+                  
             </div>
         {% endfor %}
+    
     </div>
 </div>
 

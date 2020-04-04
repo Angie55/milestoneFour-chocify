@@ -45,38 +45,28 @@
 
 /*--------------------------------- All products page*/
 .product-img {
-    background-size: contain;
-    background-position: center center;
-    background-repeat: no-repeat;
-    border: 2px solid #f09583;
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+    border: solid 2px #f09583;
     box-shadow: 9px 9px 10px -8px rgba(0,0,0,0.46);
         -webkit-box-shadow: 9px 9px 10px -8px rgba(0,0,0,0.46);
             -moz-box-shadow: 9px 9px 10px -8px rgba(0,0,0,0.46);
-    border-radius: 10px;
-    width: 300px;
-    height: 300px;
-    margin: 10px auto 20px;
 }
 
 .product-block {
-    
     margin-top: 30px;
     margin-bottom: 30px;
-    border-radius: 10px;
 }
 
-.product-block-content {
-    margin-left: 25px;
+.card {
+    border: none;
 }
 
 .product-block-price {
     color:#f09583;
     font-size: 1.25em;
     margin-top: 10px;
-}
-
-.product-block-add {
-    margin-left: 25px;
 }
 
 .add-cart-input {

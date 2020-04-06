@@ -44,6 +44,13 @@
 }
 
 /*--------------------------------- All products page*/
+
+.category-links {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
 .product-img {
     border-radius: 10px;
     width: 100%;
@@ -57,6 +64,11 @@
 .product-block {
     margin-top: 30px;
     margin-bottom: 30px;
+}
+
+.product-title {
+    color: #43281e;
+    margin-top: 20px;
 }
 
 .card {
@@ -74,20 +86,29 @@
     max-width: 20%;
 }
 
-.add-cart-btn {
+.form-control {
+    padding: 6px;
+}
+
+.add-cart-btn, .cat-link-btn {
     background-color:#f09583;
     color: white;
     transition: 0.5s;
 }
 
-.add-cart-btn:hover {
+.add-cart-btn:hover, .cat-link-btn:hover {
     background-color: #baa999;
     color: white;
 }
 
 .pound-sign {
     margin-right:5px;
-} 
+}
+
+.product-block-hr {
+    background-color: #baa999;
+    margin-top: 50px;
+}
 
 /*--------------------------------- View cart page*/
 .cart-page {
@@ -191,9 +212,27 @@ footer {
         }
     }  
 
+@media (max-width:991px) {
+        .cat-link-btn {
+            margin-top: 10px;
+            }
+        }    
+
+@media (min-width:768px) and (max-width:1460px) {
+    .add-cart-input {
+        max-width: 40%;
+        } 
+    }    
+
 /*---------------------------------Media Queries large screen*/
 @media (min-width:1200px) {
     .cart-width-container {
         max-width: 60%;
         } 
     }
+
+@media (min-width:767px) {
+    .product-block-hr {
+        display: none;
+        }
+    }    

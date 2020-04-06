@@ -14,7 +14,7 @@
             <h5 class="cart-info">{{ item.product.title }}</h5>
         </div>
         <div class="col-12  col-md-2">
-            <p class="cart-info"><i class="fas fa-pound-sign pound-sign"></i>{{ item.product.price }}</p>
+            <p class="cart-info"><i class="fas fa-pound-sign cart-pound-sign"></i>{{ item.product.price }}</p>
         </div>
         <div class="col-12 col-md-4 cart-info">
             <form class="form-inline justify-content-center" method="post" action="{% url 'adjust_cart' item.id %}">

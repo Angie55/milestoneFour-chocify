@@ -68,8 +68,11 @@
             {% endif %}
             </ul>
             <!--shopping cart icon-->
-            <a class="nav-link nav-link-colour nav-icon" href="">
+            <a class="nav-link nav-link-colour nav-icon" href="{% url 'view_cart' %}">
                 <i class="fas fa-shopping-basket" title="Cart"></i>
+                {% if product_count > 0 %}
+                    <label class="badge badge-success">{{ product_count }}</label>
+                {% endif %}
             </a>
         </div>
     </nav>

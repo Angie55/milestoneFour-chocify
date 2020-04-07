@@ -7,24 +7,11 @@
     </header>
 
     <div class="row justify-content-center category-links">
+        {% for category in categories %}
         <div class="col-sm-6 col-md-3 col-lg-2">
-            <a class=" btn btn-block cat-link-btn" href="" role="button">Fruit</a>
+            <a class=" btn btn-block cat-link-btn" href="" role="button">{{ category.name }}</a>
         </div>
-        <div class="col-sm-6 col-md-3 col-lg-2">
-            <a class=" btn btn-block cat-link-btn" href="" role="button">Vegetables</a>
-        </div>
-        <div class="col-sm-6 col-md-3 col-lg-2">
-            <a class=" btn btn-block cat-link-btn" href="" role="button">Meals</a>
-        </div>
-        <div class="col-sm-6 col-md-3 col-lg-2">
-            <a class=" btn btn-block cat-link-btn" href="" role="button">Romantic</a>
-        </div>
-        <div class="col-sm-6 col-md-3 col-lg-2">
-            <a class=" btn btn-block cat-link-btn" href="" role="button">Tools</a>
-        </div>
-        <div class="col-sm-6 col-md-3 col-lg-2">
-            <a class=" btn btn-block cat-link-btn" href="" role="button">Household</a>
-        </div>
+        {% endfor %}
     </div>
 
      <hr>

@@ -35,7 +35,7 @@ class Product(models.Model):
     image4 = models.ImageField(upload_to='images', blank=True, null=True)
 
     def get_absolute_url(self):
-        return reverse('products_detail', args=[self.id])
+        return reverse('product_details', args=[self.id])
 
     def __str__(self):
         return self.title

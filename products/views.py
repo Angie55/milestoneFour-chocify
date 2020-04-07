@@ -9,12 +9,12 @@ def all_products(request):
                                              "categories": categories})
 
 
-def products_by_category(request, category_slug):
+def products_by_category(request, category_id):
     categories = Category.objects.all()
-    products = Product.objects.all().order_by("name")
-    if category_slug:
-        category = get_object_or_404(Category, slug=category_slug)
+    products = Product.objects.all().order_by("id")
+    if category_id:
+        category = get_object_or_404(Category, id=category_id)
         products = products.filter(category=category)
-    return render(request, "categories.html", {"products": products,
-                                               "categories": categories,
-                                               })
+    return render(request, "products_by_category.html", {"products": products,
+                                                         "categories": categories,
+                                                        })

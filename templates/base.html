@@ -31,9 +31,11 @@
             <ul class="navbar-nav">
                 <!--search icon-->
                 <li>
-                    <a class="nav-link nav-link-colour nav-icon" href="">
-                        <i class="fas fa-search" title="Search"></i>
-                    </a>
+                    <form action="{% url 'search' %}" method="get">
+                        <input type="text" name="q">
+                        <button type="search"><i class="fas fa-search" title="Search"></i></button>
+                    </form>
+                    
                 </li>
                 <!--category selection dropdown list-->
                 <li class="nav-item dropdown">
@@ -53,7 +55,7 @@
                 <!--nav items that dispay depending on if the user is logged in or out-->
                 {% if user.is_authenticated %}
                 <li class="nav-item">
-                    <a class="nav-link nav-link-colour" href="{% url 'profile' %}">Profile></a>
+                    <a class="nav-link nav-link-colour" href="{% url 'profile' %}">Profile</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link nav-link-colour" href="{% url 'logout' %}">Logout</a>

@@ -4,19 +4,22 @@
 
 <div class="container-fluid individual-product-width margin-top-50px">
     <div class="row">
-    
         <div class="col-md-12 col-xl-6">
             <img class="product-img" src="{{ MEDIA_URL }}{{ products.image1 }}">
             <div class="row img-thumbnails">
+                
                 <div class="col-3">
                     <img class="product-img" src="{{ MEDIA_URL }}{{ products.image2 }}">
                 </div>
+               
                 <div class="col-3">
                     <img class="product-img" src="{{ MEDIA_URL }}{{ products.image3 }}">
                 </div>
+                
                 <div class="col-3">
                     <img class="product-img" src="{{ MEDIA_URL }}{{ products.image4 }}">
                 </div>
+                
             </div>
         </div>
         <div class="col-md-12 col-xl-6 indiv-prod-top-right">
@@ -31,8 +34,28 @@
                 </div>
             </form>
             <p class="product-intro">{{ products.introduction }}</p>
+        </div>  
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <div class="row detail-ingred">
+                <div class="col-md-12 col-xl-6 ">
+                    <h3 class="indiv-prod-headers">Details</h3>
+                    <p class="prod-info">{{ products.details }}</p>
+                </div>   
+                <div class="col-md-12 col-xl-6">
+                    <h3 class="indiv-prod-headers">Ingredients</h3>
+                    <p class="prod-info">{{ products.ingredients }}</p>
+                </div> 
+            </div>
         </div>
-        
+    </div>
+    <div class="row delivery-details">
+        <div class="col-12">
+            <h3 class="indiv-prod-headers">Delivery</h3>
+            <p></p>
+        </div>
     </div>
 </div>    
         

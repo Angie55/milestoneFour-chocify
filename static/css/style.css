@@ -128,6 +128,10 @@
     margin-top: 50px;
 }
 
+.product-intro {
+    margin-top: 50px;
+}
+
 .indiv-prod-headers {
     color: #f09583;
 }
@@ -139,8 +143,19 @@
     margin-bottom: 30px;
 }
 
-.product-intro {
+.detail-ingred {
     margin-top: 50px;
+}
+
+.prod-info {
+    padding-top: 10px;
+}
+
+.delivery-details {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-top: solid 2px #f09583;
+    border-bottom: solid 2px #f09583;
 }
 
 /*--------------------------------- View cart page*/

@@ -201,6 +201,17 @@
     margin: 0 auto;
 }
 
+.total {
+    margin-right: 10px;
+}
+
+/*--------------------------------- Checkout*/
+
+.checkout-cart-items {
+    border-right: solid 1px #baa999;
+}
+
+
 /*--------------------------------- Footer*/
 
 footer {

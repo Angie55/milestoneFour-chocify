@@ -13,27 +13,29 @@
 {% endblock %}
 
 {% block content %}
+
+
+<div class="container-fluid cart-width-container">
 <h1 class="page-headers">Checkout</h1>
 
-<div class="row cart-contents justify-content-center">
+<div class="row row-flex cart-contents justify-content-center">
     {% for item in cart_items %}
-        <div class="col-12 col-md-4 col-lg-3">
-            <div class="row checkout-cart-items">
-                <div class="col-12 col-sm-6"> 
-                    <div class="cart-img" style="background-image: url('{{ MEDIA_URL }}{{ item.product.image1 }}')"></div>
-                </div>
-                <div class="col-12 col-sm-6">
-                    <h6>{{ item.product.title }}</h6>
-                    <p>Qty: {{ item.quantity }}</p>
-                    <p><span class="fas fa-pound-sign pound-sign"></span>{{ item.product.price }}</p>
-                </div>
-            </div>
+        <div class="col-12 col-md-2 cart-items">
+            <div class="cart-img" style="background-image: url('{{ MEDIA_URL }}{{ item.product.image1 }}')"></div>
+        </div>
+        <div class="col-12 col-md-8 cart-items">
+            <h5 class="cart-info">{{ item.product.title }}</h5>
+        </div>
+        <div class="col-12 col-md-2 cart-items">
+            <p class="cart-info"><i class="fas fa-pound-sign cart-pound-sign"></i>{{ item.product.price }}</p>
         </div>
     {% endfor %}
 </div>
-<div class="row justify-content-center">
+
+<div class="row justify-content-center order-total">
     <p class="total">Your order total is: </p>
     <p><span class="fas fa-pound-sign pound-sign"></span>{{ total }}</p>
+</div>
 </div>
 
 <form role="form" method="post" id="payment-form" class="margin-top-50px" action="{% url 'checkout' %}">
@@ -45,12 +47,12 @@
     <div class="container">
         <div class="row">
             <div class="form-group col-md-6">
-                <h4>Personal & shipping info</h4>
+                <h4 class="checkout-headings">Personal & shipping info:</h4>
                 {{ order_form | as_bootstrap }}
             </div>
 
             <div class="form-group col-md-6">
-                <h4>Payment Information</h4>
+                <h4 class="checkout-headings">Payment Information:</h4>
                 {{ payment_form | as_bootstrap }}
                 {% csrf_token %}
                 <div class="form-group col-md-12">

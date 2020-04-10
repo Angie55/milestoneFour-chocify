@@ -7,16 +7,16 @@
     <h1 class="page-headers">Shopping cart</h1>
     <div class="row row-flex cart-contents">
         {% for item in cart_items %}
-        <div class="col-12 col-md-2">
+        <div class="col-12 col-md-2 cart-items">
             <div class="cart-img" style="background-image: url('{{ MEDIA_URL }}{{ item.product.image1 }}')"></div>
         </div>
-        <div class="col-12 col-md-4">
+        <div class="col-12 col-md-4 cart-items">
             <h5 class="cart-info">{{ item.product.title }}</h5>
         </div>
-        <div class="col-12  col-md-2">
+        <div class="col-12 col-md-2 cart-items">
             <p class="cart-info"><i class="fas fa-pound-sign cart-pound-sign"></i>{{ item.product.price }}</p>
         </div>
-        <div class="col-12 col-md-4 cart-info">
+        <div class="col-12 col-md-4 cart-items cart-info">
             <form class="form-inline justify-content-center" method="post" action="{% url 'adjust_cart' item.id %}">
                 {% csrf_token %}
                 <div class="form-group">
@@ -31,9 +31,10 @@
             </form>
         </div>
         <hr class="cart-hr">
-        {% endfor %} 
+        {% endfor %}
     </div>
-
+     
+    
     <div class="row justify-content-end">
         <p class="total">Total: </p>
         <p><i class="fas fa-pound-sign pound-sign"></i>{{ total }}</p>

@@ -18,6 +18,7 @@
     <script src="https://kit.fontawesome.com/430085f686.js" crossorigin="anonymous"></script>
     <!--Script tag for jQuery-->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <!--Block JS for checkout page to use Stripe to take order payments-->
     {% block head_js %}
     {% endblock head_js %}
 </head>
@@ -83,7 +84,7 @@
         </div>
     </nav>
 
-    <h1>
+    <h1 class="page-headers">
         {% block page_heading %}{% endblock %}
     </h1>
 

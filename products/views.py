@@ -1,10 +1,25 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Product, Category
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 
 def all_products(request):
+    '''
+    Displays all products and categories in the database.
+    The products are displayed 9 per page.
+    '''
     products = Product.objects.all()
     categories = Category.objects.all()
+    # Pagination code
+    page = request.GET.get('page', 1)
+    paginator = Paginator(products, 3)
+    try:
+        products = paginator.page(page)
+    except PageNotAnInteger:
+        products = paginator.page(1)
+    except EmptyPage:
+        products = paginator.page(paginator.num_pages)
+
     return render(request, "products.html", {"products": products,
                                              "categories": categories})
 

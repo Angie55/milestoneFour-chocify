@@ -114,6 +114,43 @@
     margin-top: 50px;
 }
 
+
+.page-num {
+    font-size: 1.1em;
+    padding: 0 10px;
+    margin-right: 4px;
+    margin-left: 4px;
+    border-radius: 3px;
+    background-color:#baa999;
+    color: white;
+}
+
+.page-num a {
+    color: white;
+}
+
+.current-page {
+    background-color: #f09583;
+}
+
+.page-num:hover {
+    background-color: #ddd;
+    color: #f09583;
+}
+
+.pagination-arrow {
+    color: #ddd;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.pagination-arrow a {
+    color: #f09583;
+}
+
+.pagination-arrow a:hover {
+    color: #baa999;
+}
 /*--------------------------------- Individual product page*/
 
 .individual-product-width {

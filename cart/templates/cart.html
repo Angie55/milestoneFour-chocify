@@ -1,10 +1,10 @@
 {% extends 'base.html' %}
 {% load static from staticfiles %}
 {% load bootstrap_tags %}
-
+{% block page_heading %}Shopping cart{% endblock %}
 {% block content %}
 <div class="container-fluid cart-width-container cart-page">
-    <h1 class="page-headers">Shopping cart</h1>
+    <!--Displays items added to the cart-->
     <div class="row row-flex cart-contents">
         {% for item in cart_items %}
         <div class="col-12 col-md-2 cart-items">
@@ -17,6 +17,7 @@
             <p class="cart-info"><i class="fas fa-pound-sign cart-pound-sign"></i>{{ item.product.price }}</p>
         </div>
         <div class="col-12 col-md-4 cart-items cart-info">
+            <!--Form to adjust number of each product in the cart-->
             <form class="form-inline justify-content-center" method="post" action="{% url 'adjust_cart' item.id %}">
                 {% csrf_token %}
                 <div class="form-group">
@@ -33,12 +34,12 @@
         <hr class="cart-hr">
         {% endfor %}
     </div>
-     
-    
+    <!--Displays the total of items in cart and link to checkout--> 
     <div class="row justify-content-end">
         <p class="total">Total: </p>
         <p><i class="fas fa-pound-sign pound-sign"></i>{{ total }}</p>
         <a href="{% url 'checkout' %}" class="btn checkout-btn" role="button">Checkout</a>
     </div>
 </div>
+
 {% endblock %}

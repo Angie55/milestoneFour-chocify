@@ -2,5 +2,9 @@
 {% block page_title %}{{ user }}'s Profile{% endblock %}
 {% block page_heading %}{{ user }}'s Profile{% endblock %}
 {% block content %}
-<p>{{ profile.email }}</p>
+<div class="container-fluid page-width-container page-height">
+    <h5>Your email:</h5>
+    <p> {{ profile.email }}</p>
+
+</div>
 {% endblock %}

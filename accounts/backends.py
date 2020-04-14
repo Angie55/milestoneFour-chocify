@@ -24,7 +24,7 @@ class EmailAuth:
         """
         Used by the Django authentiation system to retrieve a user instance
         """
-        
+
         try:
             user = User.objects.get(pk=user_id)
 

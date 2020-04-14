@@ -1,66 +1,72 @@
 {% extends 'base.html' %}
-
+{% block page_heading %}Shop all{% endblock %}
 {% block content %}
 <div class="container-fluid page-width-container">
-    <header>
-        <h1 class="page-headers">Shop all</h1>
-    </header>
-
-    <div class="row justify-content-center category-links">
-        {% for category in categories %}
-        <div class="col-sm-6 col-md-3 col-lg-2">
-            <a class=" btn btn-block cat-link-btn" href="{{category.get_absolute_url}}" role="button">{{ category.name }}</a>
+    <!--Individual category links as buttons-->
+    <section>
+        <div class="row justify-content-center category-links">
+            {% for category in categories %}
+            <div class="col-sm-6 col-md-3 col-lg-2">
+                <a class=" btn btn-block cat-link-btn" href="{{category.get_absolute_url}}" role="button">{{ category.name }}</a>
+            </div>
+            {% endfor %}
         </div>
-        {% endfor %}
-    </div>
+    </section>
 
     <hr>
-    
-    <div class="row justify-content-center">
-        {% for product in products %}
+    <!--Products display-->
+    <section>
+        <div class="row justify-content-center">
+            {% for product in products %}
             <div class="col-xs-12 col-md-4 col-lg-3 card product-block">
-                    <img class="img-fluid product-img" src="{{ MEDIA_URL }}{{ product.image1 }}"> 
-                    
-                    <a href="{{ product.get_absolute_url }}"><h5 class="product-title">{{ product.title }}</h5></a>
-                
-                    <p class="product-block-price"><i class="fas fa-pound-sign pound-sign"></i>{{ product.price }}</p>
-                
-                    <form method="post" action="{% url 'add_to_cart' product.id %}">
-                        {% csrf_token %}
-                        <div class="input-group">
-                            <input name="quantity" type="number" min="1" max="999" class="form-control add-cart-input" placeholder="Qty">
-                            <span class="input-group-btn justify-content-left">
-                                <button class="btn add-cart-btn" type="submit">Add to cart</button>
-                            </span>
-                        </div>
-                    </form>  
-                    <hr class="product-block-hr"> 
+                <!--Image, title and price display-->
+                <img class="img-fluid product-img" src="{{ MEDIA_URL }}{{ product.image1 }}">        
+                <a href="{{ product.get_absolute_url }}"><h5 class="product-title">{{ product.title }}</h5></a>    
+                <p class="product-block-price"><i class="fas fa-pound-sign pound-sign"></i>{{ product.price }}</p>
+                <!--Add to cart form--> 
+                <form method="post" action="{% url 'add_to_cart' product.id %}">
+                    {% csrf_token %}
+                    <div class="input-group">
+                        <input name="quantity" type="number" min="1" max="999" class="form-control add-cart-input" placeholder="Qty">
+                        <span class="input-group-btn justify-content-left">
+                            <button class="btn add-cart-btn" type="submit">Add to cart</button>
+                        </span>
+                    </div>
+                </form> 
+                <hr class="product-block-hr"> 
             </div>
-        {% endfor %}
-    </div>
-    <div class="row justify-content-center">
-        {% if products.has_other_pages %}
-        <ul class="pagination">
-            {% if products.has_previous %}
-            <li class="pagination-arrow"><a href="?page={{ products.previous_page_number }}"><i class="fas fa-arrow-left"></i></a></li>
-            {% else %}
-            <li class="disabled pagination-arrow"><i class="fas fa-arrow-left"></i></li>
+            {% endfor %} 
+        </div>
+    </section>
+    <!--Pagination-->
+    <section>
+        <div class="row justify-content-center">
+            {% if products.has_other_pages %}
+            <ul class="pagination">
+                <!--Arrow that is an active link if there is a previous page and disabled when not-->
+                {% if products.has_previous %}
+                <li class="pagination-arrow"><a href="?page={{ products.previous_page_number }}"><i class="fas fa-arrow-left"></i></a></li>
+                {% else %}
+                <li class="disabled pagination-arrow"><i class="fas fa-arrow-left"></i></li>
+                {% endif %}
+                <!--Displays number of pages, highlights current page and links to page num that is clicked-->
+                {% for i in products.paginator.page_range %}
+                {% if products.number == i %}
+                <li class="active page-num current-page"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+                {% else %}
+                <li class="page-num"><a href="?page={{ i }}">{{ i }}</a></li>
+                {% endif %}
+                {% endfor %}
+                <!--Arrow that is an active link if there is a next page and disabled when not-->
+                {% if products.has_next %}
+                <li class="pagination-arrow"><a href="?page={{ products.next_page_number }}"><i class="fas fa-arrow-right"></i></a></li>
+                {% else %}
+                <li class="disabled pagination-arrow"><i class="fas fa-arrow-right"></i></li>
+                {% endif %}
+            </ul>
             {% endif %}
-            {% for i in products.paginator.page_range %}
-            {% if products.number == i %}
-            <li class="active page-num current-page"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
-            {% else %}
-            <li class="page-num"><a href="?page={{ i }}">{{ i }}</a></li>
-            {% endif %}
-            {% endfor %}
-            {% if products.has_next %}
-            <li class="pagination-arrow"><a href="?page={{ products.next_page_number }}"><i class="fas fa-arrow-right"></i></a></li>
-            {% else %}
-            <li class="disabled pagination-arrow"><i class="fas fa-arrow-right"></i></li>
-            {% endif %}
-        </ul>
-        {% endif %}
-    </div>
+        </div>
+    </section>
 </div>
 
 {% endblock %}

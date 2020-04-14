@@ -1,32 +1,28 @@
 {% extends 'base.html' %}
+{% block page_heading %}{{ category.name }}cat{% endblock %}
 {% block content %}
-<div class="container-fluid page-width-container">
-    <header>
-        
-            <h1>{{ category.name }}</h1>
-        
-    </header>
 
-<div class="row justify-content-center">
+<div class="container-fluid page-width-container">
+    <!--Products display-->
+    <div class="row justify-content-center">
         {% for product in products %}
-            <div class="col-xs-12 col-md-4 col-lg-3 card product-block">
-                    <img class="img-fluid product-img" src="{{ MEDIA_URL }}{{ product.image1 }}"> 
-                    
-                    <h5 class="product-title">{{ product.title }}</h5>
-                
-                    <p class="product-block-price"><i class="fas fa-pound-sign pound-sign"></i>{{ product.price }}</p>
-                
-                    <form method="post" action="{% url 'add_to_cart' product.id %}">
-                        {% csrf_token %}
-                        <div class="input-group">
-                            <input name="quantity" type="number" min="1" max="999" class="form-control add-cart-input" placeholder="Qty">
-                            <span class="input-group-btn justify-content-left">
-                                <button class="btn add-cart-btn" type="submit">Add to cart</button>
-                            </span>
-                        </div>
-                    </form>  
-                    <hr class="product-block-hr"> 
-            </div>
+        <div class="col-xs-12 col-md-4 col-lg-3 card product-block">
+            <!--Image, title and price display-->
+            <img class="img-fluid product-img" src="{{ MEDIA_URL }}{{ product.image1 }}"> 
+            <a href="{{ product.get_absolute_url }}"><h5 class="product-title">{{ product.title }}</h5></a>
+            <p class="product-block-price"><i class="fas fa-pound-sign pound-sign"></i>{{ product.price }}</p>
+            <!--Add to cart form-->
+            <form method="post" action="{% url 'add_to_cart' product.id %}">
+                {% csrf_token %}
+                <div class="input-group">
+                    <input name="quantity" type="number" min="1" max="999" class="form-control add-cart-input" placeholder="Qty">
+                    <span class="input-group-btn justify-content-left">
+                        <button class="btn add-cart-btn" type="submit">Add to cart</button>
+                    </span>
+                </div>
+            </form>  
+            <hr class="product-block-hr"> 
+        </div>
         {% endfor %}
     </div>
 </div>

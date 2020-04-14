@@ -3,6 +3,10 @@ from django.urls import reverse
 
 
 class Category(models.Model):
+    '''
+    Model to create a new category, giving it a name and
+    adding an image for it.
+    '''
     name = models.CharField(max_length=100, default='')
     image = models.ImageField(upload_to='images', default='')
 
@@ -19,6 +23,10 @@ class Category(models.Model):
 
 
 class Product(models.Model):
+    '''
+    Model for adding a product with all relevant information
+    and images to be displayed on the frontend.
+    '''
     category = models.ForeignKey(Category, null=True)
     title = models.CharField(max_length=150, default='')
     introduction = models.TextField(max_length=400)

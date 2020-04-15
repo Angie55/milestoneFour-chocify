@@ -38,14 +38,52 @@
     color: #f09583;
 }
 
-.button-colour {
+.blue-btn {
     background-color: #42C0FB;
+    color: white;
+    transition: 0.5s;
+}
+
+.blue-btn:hover {
+    background-color: #baa999;
     color: white;
 }
 
 .margin-top-50px {
     margin-top: 50px;
 }
+
+.page-height {
+    min-height: 60vh;
+}
+
+/*--------------------------------- Login/register pages*/
+.login-register-block {
+    max-width: 40%;
+    margin: 70px auto 150px;
+    padding: 20px;
+    border: solid 1px #f09583;
+    border-radius: 10px;
+}
+
+.login-register-form {
+    margin-bottom: 30px;
+}
+
+.login-register-block a {
+    color: #f09583;
+    transition: 0.5s;
+}
+
+.login-register-block a:hover {
+    color: #ddd;
+    text-decoration: none;
+}
+
+.log-reg-btn {
+    margin-top: 10px;
+}
+
 /*--------------------------------- Individual category page*/
 .category-img {
     border-radius: 10px;
@@ -62,10 +100,10 @@
 }
 
 .cat-name {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 /*--------------------------------- All products page*/
 

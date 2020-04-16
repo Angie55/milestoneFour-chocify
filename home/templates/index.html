@@ -1,6 +1,19 @@
 {% extends 'base.html' %}
 {% block page_title %}Home Page{% endblock %} 
-{% block page_heading %}Home{% endblock %}
 {% block content %}
-<h2> Welcome to Chocify!</h2>
+
+<div class="container-fluid page-width-container">
+
+    <h2> Welcome to Chocify!</h2>
+
+    <div class="row justify-content-center">
+        {% for category in categories %}
+        <div class="col-md-6 col-lg-4 cat-container">
+        <img class="img-fluid category-img" src="{{ MEDIA_URL }}{{ category.image }}">
+        <div class="cat-name"><h5>{{ category.name }}</h5></div> 
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
 {% endblock %} 

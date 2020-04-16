@@ -6,7 +6,8 @@
     <section>
         <div class="row justify-content-center category-links">
             {% for category in categories %}
-            <div class="col-sm-6 col-md-3 col-lg-2">
+            <div class="col-sm-6 col-md-3 col-lg-2 cat-link">
+                <img class="img-fluid product-img" src="{{ MEDIA_URL }}{{ category.image }}">
                 <a class=" btn btn-block cat-link-btn" href="{{category.get_absolute_url}}" role="button">{{ category.name }}</a>
             </div>
             {% endfor %}

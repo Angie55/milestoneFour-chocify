@@ -57,6 +57,9 @@
     min-height: 60vh;
 }
 
+/*--------------------------------- Homepage*/
+
+
 /*--------------------------------- Login/register pages*/
 .login-register-block {
     max-width: 40%;
@@ -113,6 +116,10 @@
     margin-bottom: 30px;
 }
 
+.cat-link {
+    margin-top: 20px;
+}
+
 .product-img {
     border-radius: 10px;
     width: 100%;
@@ -150,6 +157,10 @@
 
 .form-control {
     padding: 6px;
+}
+
+.cat-link-btn {
+    margin-top: 20px;
 }
 
 .add-cart-btn, .cat-link-btn {

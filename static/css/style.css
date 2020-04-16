@@ -58,7 +58,48 @@
 }
 
 /*--------------------------------- Homepage*/
+.home-intro {
+    margin-top: 20px;
+    padding: 10px 20px;
+}
 
+.cat-name {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-top: 5px;
+    background-color: #f09583;
+    border-radius: 10px;
+    width: 60%;
+}
+
+.category-img {
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+    border: solid 2px #f09583;
+    margin-top: 20px;
+}
+
+.cat-container {
+    position: relative;
+    text-align: center;
+}
+
+.cat-container figure img {
+	opacity: 1;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+.cat-container figure:hover img {
+	opacity: .3;
+}
+
+.cat-container a {
+    color: white;
+}
 
 /*--------------------------------- Login/register pages*/
 .login-register-block {
@@ -88,26 +129,9 @@
 }
 
 /*--------------------------------- Individual category page*/
-.category-img {
-    border-radius: 10px;
-    width: 100%;
-    height: auto;
-    border: solid 2px #f09583;
-    margin-top: 20px;
-}
 
-.cat-container {
-    position: relative;
-    text-align: center;
-    color: white;
-}
 
-.cat-name {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
+
 /*--------------------------------- All products page*/
 
 .category-links {

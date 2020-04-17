@@ -38,6 +38,11 @@
     color: #f09583;
 }
 
+.sub-headers {
+    color: #f09583;
+    margin-top: 30px;
+}
+
 .blue-btn {
     background-color: #42C0FB;
     color: white;
@@ -56,6 +61,18 @@
 .page-height {
     min-height: 60vh;
 }
+
+.product-img {
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+    border: solid 2px #f09583;
+    box-shadow: 9px 9px 10px -8px rgba(0,0,0,0.46);
+        -webkit-box-shadow: 9px 9px 10px -8px rgba(0,0,0,0.46);
+            -moz-box-shadow: 9px 9px 10px -8px rgba(0,0,0,0.46);
+}
+
+
 
 /*--------------------------------- Homepage*/
 .home-intro {
@@ -142,16 +159,6 @@
 
 .cat-link {
     margin-top: 20px;
-}
-
-.product-img {
-    border-radius: 10px;
-    width: 100%;
-    height: auto;
-    border: solid 2px #f09583;
-    box-shadow: 9px 9px 10px -8px rgba(0,0,0,0.46);
-        -webkit-box-shadow: 9px 9px 10px -8px rgba(0,0,0,0.46);
-            -moz-box-shadow: 9px 9px 10px -8px rgba(0,0,0,0.46);
 }
 
 .product-block {
@@ -350,6 +357,22 @@
 
 .order-total {
     font-size: 1.25em;
+}
+
+/*--------------------------------- About us*/
+
+.info-pages-container {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.about-img-block {
+    text-align: center;
+}
+
+.about-img {
+    margin: 30px auto;
+    border: solid 2px #f09583; 
 }
 
 /*--------------------------------- Footer*/

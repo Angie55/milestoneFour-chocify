@@ -16,6 +16,7 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 from home.views import index
+from home import urls as home_urls
 from accounts import urls as accounts_urls
 from products import urls as urls_products
 from search import urls as urls_search
@@ -29,6 +30,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', index, name="index"),
     url(r'^$', all_products),
+    url(r'^home/', include(home_urls)),
     url(r'^accounts/', include(accounts_urls)),
     url(r'^products/', include(urls_products)),
     url(r'^search/', include(urls_search)),

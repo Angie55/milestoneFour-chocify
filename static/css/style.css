@@ -38,10 +38,7 @@
     color: #f09583;
 }
 
-.sub-headers {
-    color: #f09583;
-    margin-top: 30px;
-}
+
 
 .blue-btn {
     background-color: #42C0FB;
@@ -72,7 +69,15 @@
             -moz-box-shadow: 9px 9px 10px -8px rgba(0,0,0,0.46);
 }
 
+.back-to-top-link {
+    color:#43281e;
+    margin-top: 20px;
+}
 
+.back-to-top-link:hover {
+    color:#baa999;
+    text-decoration: none;
+}
 
 /*--------------------------------- Homepage*/
 .home-intro {
@@ -366,12 +371,15 @@
     margin-bottom: 50px;
 }
 
-.about-img-block {
-    text-align: center;
+.sub-headers {
+    color: #f09583;
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 
 .about-img {
-    margin: 30px auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
     border: solid 2px #f09583; 
 }
 
@@ -431,6 +439,16 @@ footer {
     .cart-img {
         height: 250px;
         width: 250px;
+        }
+    .info-pages-container {
+        margin-top: 30px;
+        }
+    .page-width-container {
+        max-width: 95%;
+        }
+    .about-img {
+        margin-top: 15px;
+        margin-bottom: 15px;
         }
     }  
 

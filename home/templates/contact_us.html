@@ -6,6 +6,12 @@
 
 <div class="container-fluid page-width-container">
 
+    <form class="login-register-form" method="POST">
+        {% csrf_token %} 
+        {{ contact_form | as_bootstrap }}
+        <button type="submit" class="btn blue-btn log-reg-btn">Send</button>
+    </form>
+
 </div>
 
 {% endblock %} 

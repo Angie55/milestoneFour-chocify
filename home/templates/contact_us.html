@@ -2,11 +2,19 @@
 {% load bootstrap_tags %}
 {% block page_title %}Contact us{% endblock %}
 {% block page_heading %}Contact us{% endblock %}
+{% block email_js %}
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("{{ EMAILJS_USERID }}");
+   })();
+</script>
+{% endblock %}
 {% block content %}
 
 <div class="container-fluid page-width-container">
 
-    <form class="login-register-form" method="POST">
+    <form onsubmit="return sendMail(this);" class="login-register-form">
         {% csrf_token %} 
         {{ contact_form | as_bootstrap }}
         <button type="submit" class="btn blue-btn log-reg-btn">Send</button>

@@ -381,6 +381,19 @@
     border: solid 2px #f09583; 
 }
 
+/*--------------------------------- Contact us*/
+.contact-block {
+    max-width: 60%;
+    margin: 40px auto 100px;
+    padding: 30px;
+    border: solid 1px #f09583;
+    border-radius: 10px;
+}
+
+.contact-text {
+    text-align: center;
+    margin-top: 30px;
+}
 /*--------------------------------- Footer*/
 
 footer {

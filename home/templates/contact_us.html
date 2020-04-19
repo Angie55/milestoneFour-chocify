@@ -6,17 +6,20 @@
 {% block content %}
 
 <div class="container-fluid page-width-container">
-
-    <form id="contact-form" method="POST" class="login-register-form">
-        {% csrf_token %} 
-        {{ contact_form | as_bootstrap }}
-        <button type="submit" class="btn blue-btn log-reg-btn">Send</button>
-    </form>
-    <div></div>
+    <p class="contact-text">If you would like to get in touch, please send us a message using this form</p>
+    <div class="contact-block">
+        <!--Contact us form-->
+        <form id="contact-form" method="POST" >
+            {% csrf_token %} 
+            {{ contact_form | as_bootstrap }}
+            <button type="submit" class="btn blue-btn log-reg-btn">Send</button>
+        </form>
+    </div>
 </div>
 
 {% endblock %} 
 
+<!--Block with Javascript that Emailjs requires to email contact form-->
 {% block email_js %}
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
 <script type="text/javascript">

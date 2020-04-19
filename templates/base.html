@@ -17,12 +17,11 @@
     <!-- Font awesome -->
     <script src="https://kit.fontawesome.com/430085f686.js" crossorigin="anonymous"></script>
     <!--Script tag for jQuery-->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <!--Block JS for checkout page to use Stripe to take order payments-->
     {% block head_js %}
     {% endblock head_js %}
-    {% block email_js %}
-    {% endblock email_js %}
+    
 </head>
 
 <body>
@@ -144,6 +143,9 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <!--Script tag for Bootstrap JS-->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    {% block email_js %}
+    {% endblock email_js %}
     <script src="{% static 'js/sendEmail.js' %}"></script>
     </body>
 </html>

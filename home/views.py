@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from products.models import Category
 from .forms import ContactForm
+from django.conf import settings
 
 
 def index(request):
@@ -21,4 +22,6 @@ def contact(request):
 
     contact_form = ContactForm()
 
-    return render(request, "contact_us.html", {'contact_form': contact_form})
+    return render(request, "contact_us.html", {'contact_form': contact_form,
+                                               "emjs_id":
+                                               settings.EMAILJS_USERID})

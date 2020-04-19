@@ -3,7 +3,8 @@ from django.shortcuts import render, redirect, reverse
 
 def view_cart(request):
     """
-    The view that renders the cart page with products that have been added
+    The view that renders the cart page with products that have
+    been added.
     """
     return render(request, "cart.html")
 

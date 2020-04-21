@@ -1,3 +1,12 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+}
+
 /*--------------------------------- Main Navigation*/
 .nav {
     border-bottom: 8px solid #43281e;
@@ -440,6 +449,10 @@ footer {
     .social-links {
         margin-top: 0px;
         }
+    .contact-block {
+        padding: 15px;
+        min-width: 100%;
+        }
     }
 
 @media (max-width:767px) {  
@@ -474,6 +487,11 @@ footer {
         max-width: 40%;
         } 
     }    
+
+@media (max-width:1200px) {
+    .contact-block {
+        max-width: 90%;
+}
 
 /*---------------------------------Media Queries large screen*/
 @media (min-width:1200px) {

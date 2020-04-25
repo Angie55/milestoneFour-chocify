@@ -1,10 +1,17 @@
 {% extends 'base.html' %}
+{% load bootstrap_tags %}
 {% block page_title %}{{ user }}'s Profile{% endblock %}
 {% block page_heading %}{{ user }}'s Profile{% endblock %}
 {% block content %}
 <div class="container-fluid page-width-container page-height">
     <h5>Your email:</h5>
-    <p> {{ profile.email }}</p>
+    <p> {{ user.email }}</p>
+
+    <form class="login-register-form" method="POST">
+        {% csrf_token %}
+        {{ user_form | as_bootstrap  }}
+        <button type="submit" class="btn blue-btn log-reg-btn">Update</button>
+    </form>
 
 </div>
 {% endblock %}

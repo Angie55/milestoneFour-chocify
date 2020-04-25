@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, reverse
 from django.contrib import auth, messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
-from accounts.forms import UserLoginForm, UserRegistrationForm
+from accounts.forms import UserLoginForm, UserRegistrationForm, UserUpdateForm
 
 
 @login_required
@@ -62,6 +62,21 @@ def registration(request):
 
 
 def user_profile(request):
-    """Renders the user's profile page"""
-    user = User.objects.get(email=request.user.email)
-    return render(request, 'profile.html', {"profile": user})
+    """
+    Renders the user's info on the profile page with a 
+    form to update their username or emails address.
+    """
+    if request.method == 'POST':
+        user_form = UserUpdateForm(request.POST, instance=request.user)
+        # If the form is valid, save new details
+        if user_form.is_valid():
+            user_form.save()
+            return redirect('profile')
+    else:
+        user_form = UserUpdateForm(instance=request.user)
+
+    context = {
+        'user_form': user_form
+    }
+
+    return render(request, 'profile.html', context)

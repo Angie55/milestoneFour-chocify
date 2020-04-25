@@ -46,3 +46,12 @@ def clean_password2(self):
         raise ValidationError("Passwords must match")
 
     return password2
+
+
+class UserUpdateForm(forms.ModelForm):
+    """ Form used to update User's username and email """
+    email = forms.EmailField()
+
+    class Meta:
+        model = User
+        fields = ['username', 'email']

@@ -12,6 +12,7 @@ class UserLoginForm(forms.Form):
 
 class UserRegistrationForm(UserCreationForm):
     """Form used to register a new user"""
+    email = forms.CharField(required=True)
     password1 = forms.CharField(
         label="Password",
         widget=forms.PasswordInput)

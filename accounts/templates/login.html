@@ -4,14 +4,16 @@
 {% block page_heading %}Login{% endblock %} 
 {% block content %}
 
-<div class="container-fluid page-width-container page-height">
+<div class="container-fluid page-width-container short-content">
+    <!--Login form-->
     <div class="login-register-block">
         <form class="login-register-form" method="POST">
             {% csrf_token %} 
             {{ login_form | as_bootstrap }}
             <button type="submit" class="btn blue-btn log-reg-btn">Login</button>
         </form>
-
+        <!--Links to reset password or register-->
+        <hr class="reg-spacing">
         <p>Forgotton your password? <a href="{% url 'password_reset' %}">Reset password</a></p>
         <p>Don't have an account? <a href="">Register here</a></p>
     </div>

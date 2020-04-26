@@ -177,16 +177,22 @@ p {
     color: #f09583;
 }
 
-.current-info {
-    margin-top: 40px;
-}
-
 .profile-update {
     margin-top: 40px;
 }
 
-/*--------------------------------- Password reset pages*/
+.marg-top-40 {
+    margin-top: 40px;
+}
 
+/*--------------------------------- Password reset pages*/
+.marg-bottom-40 {
+    margin-bottom: 40px;
+}
+
+.email-input {
+    min-width:80%;
+}
 
 /*--------------------------------- Profile page*/
 

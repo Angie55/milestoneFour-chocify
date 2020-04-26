@@ -57,6 +57,10 @@ p {
     color: #f09583;
 }
 
+.center-text {
+    text-align: center;
+}
+
 .blue-btn {
     background-color: #42C0FB;
     color: white;
@@ -136,8 +140,8 @@ p {
     color: white;
 }
 
-/*--------------------------------- Login/register pages*/
-.login-register-block {
+/*--------------------------------- Login/register/profile pages*/
+.general-form-block {
     max-width: 40%;
     margin: 70px auto 150px;
     padding: 20px;
@@ -154,17 +158,17 @@ p {
     margin-bottom: 30px;
 }
 
-.login-register-block a {
+.general-form-block a {
     color: #f09583;
     transition: 0.5s;
 }
 
-.login-register-block a:hover {
+.general-form-block a:hover {
     color: #ddd;
     text-decoration: none;
 }
 
-.log-reg-btn {
+.general-form-btn {
     margin-top: 15px;
 }
 
@@ -173,12 +177,18 @@ p {
     color: #f09583;
 }
 
-/*--------------------------------- Individual category page*/
-.password-reset {
-    text-align: center;
+.current-info {
+    margin-top: 40px;
 }
 
-/*--------------------------------- Individual category page*/
+.profile-update {
+    margin-top: 40px;
+}
+
+/*--------------------------------- Password reset pages*/
+
+
+/*--------------------------------- Profile page*/
 
 
 
@@ -496,7 +506,7 @@ footer {
         margin-top: 15px;
         margin-bottom: 15px;
         }
-    .login-register-block {
+    .general-form-block {
         min-width: 100%;
         margin-top: 40px;
         }
@@ -518,7 +528,7 @@ footer {
     .contact-block {
         max-width: 90%;
     }
-    .login-register-block {
+    .general-form-block {
         max-width: 60%;
     }
 }

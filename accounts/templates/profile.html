@@ -3,15 +3,28 @@
 {% block page_title %}{{ user }}'s Profile{% endblock %}
 {% block page_heading %}{{ user }}'s Profile{% endblock %}
 {% block content %}
-<div class="container-fluid page-width-container page-height">
-    <h5>Your email:</h5>
-    <p> {{ user.email }}</p>
-
-    <form class="login-register-form" method="POST">
-        {% csrf_token %}
-        {{ user_form | as_bootstrap  }}
-        <button type="submit" class="btn blue-btn log-reg-btn">Update</button>
-    </form>
-
+<div class="container-fluid page-width-container short-content">
+    <!--Display of users current username and email-->
+    <div class="row justify-content-center center-text current-info">
+        <div class="col-sm-12 col-md-6 col-xl-3">
+            <h5>Your email:</h5>
+            <p> {{ user.email }}</p>
+        </div>
+        <div class="col-sm-12 col-md-6 col-xl-3">
+            <h5>Your Username:</h5>
+            <p> {{ user.username }}</p>
+        </div>
+    </div>
+    <hr>
+    <!--Update username and email form-->
+    <div class="general-form-block profile-update">
+        <p class="center-text">Edit your username or email in this form to update your profile information</p>
+        <hr>
+        <form class="" method="POST">
+            {% csrf_token %}
+            {{ user_form | as_bootstrap  }}
+            <button type="submit" class="btn blue-btn general-form-btn">Update</button>
+        </form>
+    </div>
 </div>
 {% endblock %}

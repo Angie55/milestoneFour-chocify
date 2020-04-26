@@ -6,11 +6,11 @@
 
 <div class="container-fluid page-width-container short-content">
     <!--Login form-->
-    <div class="login-register-block">
+    <div class="general-form-block">
         <form class="login-register-form" method="POST">
             {% csrf_token %} 
             {{ login_form | as_bootstrap }}
-            <button type="submit" class="btn blue-btn log-reg-btn">Login</button>
+            <button type="submit" class="btn blue-btn general-form-btn">Login</button>
         </form>
         <!--Links to reset password or register-->
         <hr class="reg-spacing">

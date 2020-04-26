@@ -6,7 +6,7 @@
 
 <div class="container-fluid page-width-container short-content">
     <!--Register form-->
-    <div class="login-register-block">
+    <div class="general-form-block">
         <!--Link to login-->
         <p class="reg-spacing">Already have an account? <a href="{% url 'login' %}">Login here </a></p>
         <hr>
@@ -14,7 +14,7 @@
         <form class="login-register-form" method="POST">
             {% csrf_token %}
             {{ registration_form | as_bootstrap  }}
-            <button type="submit" class="btn blue-btn log-reg-btn">Register</button>
+            <button type="submit" class="btn blue-btn general-form-btn">Register</button>
         </form>
     </div>
 </div>

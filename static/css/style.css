@@ -42,6 +42,25 @@ p {
     font-size: 20px;
 }
 
+.search-btn {
+    color: white;
+    background-color: #f09583;
+    margin-right: 20px;
+    padding: 1px 5px;
+}
+
+.search-btn:hover {
+    color: white;
+    background-color: #baa999;
+}
+
+.search-input {
+    border: solid 1px #baa999;
+    border-radius: 3px;
+    padding-left: 10px;
+    color: #baa999;
+}
+
 /*--------------------------------- General*/
 .page-width-container, .cart-width-container {
     max-width: 80%;

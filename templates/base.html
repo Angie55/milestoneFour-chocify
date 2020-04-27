@@ -38,15 +38,12 @@
         </button>
         <!--main navbar links that are inline on a large screen and toggled on small screens-->
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+            <!--search icon-->
+            <form action="{% url 'search' %}" method="get">
+                <input class="search-input" type="text" name="q" placeholder="Search" aria-label="Search">
+                <button type="search" class="btn search-btn"><i class="fas fa-search" title="Search"></i></button>
+            </form>
             <ul class="navbar-nav">
-                <!--search icon-->
-                <li>
-                    <form action="{% url 'search' %}" method="get">
-                        <input type="text" name="q">
-                        <button type="search"><i class="fas fa-search" title="Search"></i></button>
-                    </form>
-                    
-                </li>
                 <!--category selection dropdown list-->
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle nav-link-colour" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

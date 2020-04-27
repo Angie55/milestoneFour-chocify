@@ -51,6 +51,13 @@ p {
     flex: 1 0 auto;
 }
 
+.alert-style {
+    background: #f09583;
+    color: white;
+    margin-bottom: 30px;
+    margin-top: -30px;
+}
+
 .page-headers {
     text-align: center;
     margin-top: 20px;
@@ -97,6 +104,10 @@ p {
 }
 
 /*--------------------------------- Homepage*/
+.hero {
+    margin-top: -30px;
+}
+
 .home-intro {
     margin-top: 20px;
     padding: 10px 20px;

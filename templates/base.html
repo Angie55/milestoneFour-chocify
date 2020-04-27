@@ -20,6 +20,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
     <!--Script tag for jQuery-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <!--Alert JS-->
+    <script type="text/javascript" src="{% static 'js/alert.js' %}"></script>
     <!--Block JS for checkout page to use Stripe to take order payments-->
     {% block head_js %}
     {% endblock head_js %}
@@ -93,9 +95,8 @@
         {% block page_heading %}{% endblock %}
     </h1>
 
-
     {% if messages %}
-    <div>
+    <div class="alert alert-style" role="alert">
         {% for message in messages %} {{ message }} {% endfor %}
     </div>
     {% endif %}
@@ -149,5 +150,6 @@
     {% block email_js %}
     {% endblock email_js %}
     <script src="{% static 'js/sendEmail.js' %}"></script>
+
     </body>
 </html>

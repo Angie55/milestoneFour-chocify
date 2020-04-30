@@ -3,22 +3,22 @@
 {% load bootstrap_tags %}
 {% block page_heading %}Shopping cart{% endblock %}
 {% block content %}
-<div class="container-fluid cart-width-container cart-page">
+<div class="container-fluid cart-width-container short-content cart-page">
     <!--Displays items added to the cart-->
-    <div class="row row-flex cart-contents">
+    <div class="row cart-contents">
         {% for item in cart_items %}
         <div class="col-12 col-md-2 cart-items">
             <div class="cart-img" style="background-image: url('{{ MEDIA_URL }}{{ item.product.image1 }}')"></div>
         </div>
         <div class="col-12 col-md-4 cart-items">
-            <h5 class="cart-info">{{ item.product.title }}</h5>
+            <a href="{{ product.get_absolute_url }}"><h5 class="cart-info cart-title">{{ item.product.title }}</h5></a>
         </div>
         <div class="col-12 col-md-2 cart-items">
             <p class="cart-info"><i class="fas fa-pound-sign cart-pound-sign"></i>{{ item.product.price }}</p>
         </div>
         <div class="col-12 col-md-4 cart-items cart-info">
             <!--Form to adjust number of each product in the cart-->
-            <form class="form-inline justify-content-center" method="post" action="{% url 'adjust_cart' item.id %}">
+            <form class="form-inline justify-content-center cart-form" method="post" action="{% url 'adjust_cart' item.id %}">
                 {% csrf_token %}
                 <div class="form-group">
                     <label for="exampleInputAmount" class="sr-only">New Qty</label>
@@ -27,18 +27,24 @@
                         <input name="quantity" type="number" min="0" max="999" class="form-control qty-input" placeholder="{{item.quantity}}">
                         <div class="input-group-addon"></div>
                     </div>
+                    <button type="submit" class="btn blue-btn update-btn">Update</button>
                 </div>
-                <button type="submit" class="btn blue-btn"><i class="fas fa-check"></i></button>
+                
             </form>
+            <hr class="cart-hr">
         </div>
-        <hr class="cart-hr">
+        
         {% endfor %}
     </div>
+    <hr>
     <!--Displays the total of items in cart and link to checkout--> 
+    <div class="row justify-content-end ">
+            <h5 class="total">Total: </h5>
+            <h5><i class="fas fa-pound-sign pound-sign"></i>{{ total }}</h5>
+        
+    </div>
     <div class="row justify-content-end">
-        <p class="total">Total: </p>
-        <p><i class="fas fa-pound-sign pound-sign"></i>{{ total }}</p>
-        <a href="{% url 'checkout' %}" class="btn checkout-btn" role="button">Checkout</a>
+    <a href="{% url 'checkout' %}" class="btn checkout-btn" role="button">Checkout</a>
     </div>
 </div>
 

@@ -375,40 +375,12 @@ p {
 
 /*--------------------------------- View cart page*/
 .cart-page {
-    min-height: 80vh;
     margin-bottom: 50px;
 }
+
 .cart-contents {
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-
-.cart-items {
-    margin-top: 20px;
-}
-
-.cart-info {
     margin-top: 30px;
-}
-
-.qty-input {
-    margin-left: 10px;
-    margin-right: 10px;
-}
-
-.cart-hr {
-    color: #ddd;
-}
-
-.cart-pound-sign {
-    margin-left: 10px;
-    margin-right: 10px;
-}
-
-.checkout-btn {
-    background-color: #66CD00;
-    color: white;
-    margin-left: 20px;
+    margin-bottom: 50px;
 }
 
 .cart-img {
@@ -420,8 +392,62 @@ p {
     margin: 0 auto;
 }
 
+.cart-items {
+    margin-top: 20px;
+}
+
+.cart-title {
+    padding-left: 10px;
+}
+
+.cart-info {
+    margin-top: 30px;
+}
+
+.cart-items a {
+    color:#f09583;
+    transition: 0.5s;
+}
+
+.cart-items a:hover{
+    color: #baa999;
+    text-decoration: none;
+}
+
+.cart-form {
+    margin-top: 15px;
+}
+
+.qty-input {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.cart-pound-sign {
+    margin-left: 10px;
+    margin-right: 5px;
+}
+
 .total {
     margin-right: 10px;
+}
+
+.checkout-btn {
+    background-color: #66CD00;
+    color: white;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.checkout-btn:hover {
+    background-color: #baa999;
+    color: white;
+}
+
+.cart-hr {
+    color: #baa999;
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 
 /*--------------------------------- Checkout*/
@@ -523,15 +549,24 @@ footer {
         }
     }
 
+@media (max-width:575px) {
+    .update-btn {
+        margin-top: 10px;
+    }
+}
+
 @media (max-width:767px) {  
     .cart-info {
         text-align: center;
-        margin-top: 10px;
+        margin-top: 5px;
         }
     .cart-img {
         height: 250px;
         width: 250px;
         }
+    .cart-items, .cart-form {
+        margin-top: 5px;
+    }    
     .info-pages-container {
         margin-top: 30px;
         }
@@ -581,7 +616,7 @@ footer {
     }
 
 @media (min-width:768px) {
-.checkout-hr, .product-block-hr {
+.checkout-hr, .product-block-hr, .cart-hr {
     display: none;
     }
 }

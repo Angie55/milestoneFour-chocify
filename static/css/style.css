@@ -477,6 +477,11 @@ p {
 
 .order-total {
     font-size: 1.25em;
+    margin-top: 25px;
+}
+
+.pay-btn {
+    margin-top: 30px;
 }
 
 /*--------------------------------- About us*/

@@ -30,12 +30,13 @@
                 </div>
             {% endfor %}
         </div>
-    
+        <hr>
         <!--Total cost of order, showing amount the customer will be charged-->
         <div class="row justify-content-center order-total">
             <p class="total">Your order total is: </p>
             <p><span class="fas fa-pound-sign pound-sign"></span>{{ total }}</p>
         </div>
+        <hr>
     </section>
 
     <section>
@@ -59,7 +60,7 @@
                         {{ payment_form | as_bootstrap }}
                         {% csrf_token %}
                         <div class="form-group col-md-12">
-                            <input class=" btn btn-primary" id="submit_payment_btn" name="commit" type="submit" value="Submit Payment">
+                            <input class=" btn blue-btn pay-btn" id="submit_payment_btn" name="commit" type="submit" value="Submit Payment">
                         </div>
                     </div>
                 </div>

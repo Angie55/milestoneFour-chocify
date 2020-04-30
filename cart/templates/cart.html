@@ -3,6 +3,7 @@
 {% load bootstrap_tags %}
 {% block page_heading %}Shopping cart{% endblock %}
 {% block content %}
+{% if product_count > 0 %}
 <div class="container-fluid cart-width-container short-content cart-page">
     <!--Displays items added to the cart-->
     <div class="row cart-contents">
@@ -46,6 +47,17 @@
     <div class="row justify-content-end">
     <a href="{% url 'checkout' %}" class="btn checkout-btn" role="button">Checkout</a>
     </div>
+</div>
+{% endif %}
+
+{% if product_count == 0 %}
+<div class="container-fluid short-content">
+    <h2 class="empty-cart">Your cart is empty</h2>
+    <div class="row justify-content-center ">
+        <a href="{% url 'products' %}" class="btn blue-btn empty-cart-btn" role="button">Shop</a>
+        <a href="{% url 'index' %}" class="btn blue-btn empty-cart-btn" role="button">Home</a>
+    </div>
+{% endif %}
 </div>
 
 {% endblock %}

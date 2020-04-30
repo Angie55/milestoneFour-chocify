@@ -61,6 +61,11 @@ p {
     color: #baa999;
 }
 
+.badge-color {
+    background-color: #42C0FB;
+    color: white;
+}
+
 /*--------------------------------- General*/
 .page-width-container, .cart-width-container {
     max-width: 80%;
@@ -448,6 +453,16 @@ p {
     color: #baa999;
     margin-top: 25px;
     margin-bottom: 25px;
+}
+
+.empty-cart {
+    text-align: center;
+    color:#43281e;
+    margin-top: 50px;
+}
+
+.empty-cart-btn {
+    margin: 50px 30px;
 }
 
 /*--------------------------------- Checkout*/

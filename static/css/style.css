@@ -127,6 +127,14 @@ p {
     text-decoration: none;
 }
 
+.marg-bottom-40 {
+    margin-bottom: 40px;
+}
+
+.marg-top-40 {
+    margin-top: 40px;
+}
+
 /*--------------------------------- Homepage*/
 .hero {
     margin-top: -30px;
@@ -212,26 +220,20 @@ p {
     color: #f09583;
 }
 
-.profile-update {
-    margin-top: 40px;
-}
 
-.marg-top-40 {
-    margin-top: 40px;
-}
+
+
 
 /*--------------------------------- Password reset pages*/
-.marg-bottom-40 {
-    margin-bottom: 40px;
-}
-
 .email-input {
     min-width:80%;
 }
 
 /*--------------------------------- Profile page*/
 
-
+.profile-update {
+    margin-top: 40px;
+}
 
 /*--------------------------------- All products page*/
 
@@ -294,7 +296,6 @@ p {
 }
 
 .product-block-hr {
-    background-color: #baa999;
     margin-top: 50px;
 }
 
@@ -450,7 +451,6 @@ p {
 }
 
 .cart-hr {
-    color: #baa999;
     margin-top: 25px;
     margin-bottom: 25px;
 }
@@ -601,6 +601,9 @@ footer {
         min-width: 100%;
         margin-top: 40px;
         }
+    .cart-total-hr {
+        display: none;
+        }
     }
 
 @media (max-width:991px) {
@@ -636,7 +639,7 @@ footer {
     }
 
 @media (min-width:768px) {
-.checkout-hr, .product-block-hr, .cart-hr {
+.product-block-hr, .cart-hr {
     display: none;
     }
 }

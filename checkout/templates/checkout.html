@@ -1,7 +1,8 @@
 {% extends "base.html" %}
-{% block page_heading %}Checkout{% endblock %}
+{% block page_title %}Checkout{% endblock %}
 {% load static from staticfiles %}
 {% load bootstrap_tags %}
+{% block page_heading %}Checkout{% endblock %}
 <!--Block with Javascript that Stripe requires-->
 {% block head_js %}
 <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
@@ -27,10 +28,13 @@
                 </div>
                 <div class="col-12 col-md-2 cart-items">
                     <p class="cart-info"><i class="fas fa-pound-sign cart-pound-sign"></i>{{ item.product.price }}</p>
+                    <hr class="cart-hr">
                 </div>
+                
             {% endfor %}
+            <hr class="cart-hr">
         </div>
-        <hr>
+        
         <!--Total cost of order, showing amount the customer will be charged-->
         <div class="row justify-content-center order-total">
             <p class="total">Your order total is: </p>

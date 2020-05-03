@@ -14,12 +14,16 @@
                     <div class="col-3">
                         <img class="product-img" src="{{ MEDIA_URL }}{{ products.image2 }}">
                     </div>
+                    {% if products.image3 %}
                     <div class="col-3">
                         <img class="product-img" src="{{ MEDIA_URL }}{{ products.image3 }}">
                     </div>
+                    {% endif %}
+                    {% if products.image4 %}
                     <div class="col-3">
                         <img class="product-img" src="{{ MEDIA_URL }}{{ products.image4 }}">
                     </div>
+                    {% endif %}
                 </div>
             </div>
             <!--Products title, price and introduction-->

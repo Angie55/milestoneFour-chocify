@@ -23,13 +23,13 @@
             <div class="col-xs-12 col-md-4 card product-block">
                 <!--Image, title and price display-->
                 <img class="img-fluid product-img" src="{{ MEDIA_URL }}{{ product.image1 }}">        
-                <a href="{{ product.get_absolute_url }}"><h5 class="product-title">{{ product.title }}</h5></a>    
+                <a href="{{ product.get_absolute_url }}"><h5 class="product-title-link">{{ product.title }}</h5></a>    
                 <p class="product-block-price"><i class="fas fa-pound-sign pound-sign"></i>{{ product.price }}</p>
                 <!--Add to cart form--> 
                 <form method="post" action="{% url 'add_to_cart' product.id %}">
                     {% csrf_token %}
                     <div class="input-group">
-                        <input name="quantity" type="number" min="1" max="999" class="form-control add-cart-input" placeholder="Qty">
+                        <input name="quantity" type="number" min="1" max="999" class="form-control add-cart-input" placeholder="Qty" required>
                         <span class="input-group-btn justify-content-left">
                             <button class="btn add-cart-btn" type="submit">Add to cart</button>
                         </span>

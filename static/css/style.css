@@ -224,10 +224,6 @@ p {
     color: #f09583;
 }
 
-
-
-
-
 /*--------------------------------- Password reset pages*/
 .email-input {
     min-width:80%;
@@ -256,9 +252,9 @@ p {
     margin-bottom: 30px;
 }
 
-.product-title {
-    color: #43281e;
-    margin-top: 20px;
+.product-title-link {
+    color: red;
+    margin-top: 10px;
 }
 
 .card {

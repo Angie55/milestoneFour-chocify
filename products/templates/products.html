@@ -1,10 +1,11 @@
 {% extends 'base.html' %}
+{% block page_title %}Shop all{% endblock %}
 {% block page_heading %}Shop all{% endblock %}
 {% block content %}
-<div class="container-fluid page-width-container">
+<div class="container-fluid page-width-container marg-bottom-40">
     <!--Individual category links as buttons-->
-    <section>
-        <div class="row justify-content-center category-links">
+    <section class="d-none d-md-block">
+        <div class="row justify-content-center category-links ">
             {% for category in categories %}
             <div class="col-sm-6 col-md-3 col-lg-2 cat-link">
                 <img class="img-fluid product-img" src="{{ MEDIA_URL }}{{ category.image }}">
@@ -19,7 +20,7 @@
     <section>
         <div class="row justify-content-center">
             {% for product in products %}
-            <div class="col-xs-12 col-md-4 col-lg-3 card product-block">
+            <div class="col-xs-12 col-md-4 card product-block">
                 <!--Image, title and price display-->
                 <img class="img-fluid product-img" src="{{ MEDIA_URL }}{{ product.image1 }}">        
                 <a href="{{ product.get_absolute_url }}"><h5 class="product-title">{{ product.title }}</h5></a>    
@@ -41,7 +42,7 @@
     </section>
     <!--Pagination-->
     <section>
-        <div class="row justify-content-center">
+        <div class="row justify-content-center margin-top-50px">
             {% if products.has_other_pages %}
             <ul class="pagination">
                 <!--Arrow that is an active link if there is a previous page and disabled when not-->
@@ -68,6 +69,11 @@
             {% endif %}
         </div>
     </section>
+
+    <!--Back to top of page link-->
+    <div class="row justify-content-center">
+        <a href="#back-to-top" class="back-to-top-link">Back to top</a>
+    </div>
 </div>
 
 {% endblock %}

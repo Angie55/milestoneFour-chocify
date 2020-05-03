@@ -12,7 +12,7 @@ def all_products(request):
     categories = Category.objects.all().order_by("id")
     # Pagination code
     page = request.GET.get('page', 1)
-    paginator = Paginator(products, 3)
+    paginator = Paginator(products, 9)
     try:
         products = paginator.page(page)
     except PageNotAnInteger:

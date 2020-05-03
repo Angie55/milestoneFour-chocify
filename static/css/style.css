@@ -67,6 +67,9 @@ p {
 }
 
 /*--------------------------------- General*/
+
+
+
 .page-width-container, .cart-width-container {
     max-width: 80%;
 }
@@ -103,10 +106,6 @@ p {
     color: white;
 }
 
-.margin-top-50px {
-    margin-top: 50px;
-}
-
 .product-img {
     border-radius: 10px;
     width: 100%;
@@ -134,6 +133,11 @@ p {
 .marg-top-40 {
     margin-top: 40px;
 }
+
+.margin-top-50px {
+    margin-top: 50px;
+}
+
 
 /*--------------------------------- Homepage*/
 .hero {
@@ -299,6 +303,11 @@ p {
     margin-top: 50px;
 }
 
+.pagination-block {
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
 .page-num {
     font-size: 1.1em;
     padding: 0 10px;
@@ -335,6 +344,7 @@ p {
 .pagination-arrow a:hover {
     color: #baa999;
 }
+
 /*--------------------------------- Individual product page*/
 
 .individual-product-width {
@@ -603,7 +613,7 @@ footer {
         }
     .cart-total-hr {
         display: none;
-        }
+        }   
     }
 
 @media (max-width:991px) {

@@ -25,3 +25,8 @@ def contact(request):
     return render(request, "contact_us.html", {'contact_form': contact_form,
                                                "emjs_id":
                                                settings.EMAILJS_USERID})
+
+
+def privacy(request):
+    """A view that displays the privacy policy page"""
+    return render(request, "privacy_policy.html")

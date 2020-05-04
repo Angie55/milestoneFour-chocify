@@ -30,3 +30,8 @@ def contact(request):
 def privacy(request):
     """A view that displays the privacy policy page"""
     return render(request, "privacy_policy.html")
+
+
+def terms(request):
+    """A view that displays the privacy policy page"""
+    return render(request, "terms_conditions.html")

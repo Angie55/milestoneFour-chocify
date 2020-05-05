@@ -16,7 +16,7 @@ p {
 /*--------------------------------- Main Navigation*/
 .nav {
     border-bottom: 8px solid #43281e;
-} 
+}
 
 .nav-link-colour {
     color: #f09583;
@@ -67,9 +67,6 @@ p {
 }
 
 /*--------------------------------- General*/
-
-
-
 .page-width-container, .cart-width-container {
     max-width: 80%;
 }
@@ -116,7 +113,17 @@ p {
             -moz-box-shadow: 9px 9px 10px -8px rgba(0,0,0,0.46);
 }
 
-.back-to-top-link {
+.pink-link {
+    color:#f09583;
+    transition: 0.5s;
+}
+
+.pink-link:hover{
+    color: #baa999;
+    text-decoration: none;
+}
+
+.back-to-top-link, .back-all-prods {
     color:#43281e;
     margin-top: 20px;
 }
@@ -253,8 +260,8 @@ p {
 }
 
 .product-title-link {
-    color: red;
-    margin-top: 10px;
+    color: #f09583;
+    margin-top: 20px;
 }
 
 .card {
@@ -416,16 +423,6 @@ p {
     margin-top: 30px;
 }
 
-.cart-items a {
-    color:#f09583;
-    transition: 0.5s;
-}
-
-.cart-items a:hover{
-    color: #baa999;
-    text-decoration: none;
-}
-
 .cart-form {
     margin-top: 15px;
 }
@@ -490,7 +487,7 @@ p {
     margin-top: 30px;
 }
 
-/*--------------------------------- About us*/
+/*--------------------------------- About us/Contact us/Privacy/Terms*/
 
 .info-pages-container {
     margin-top: 50px;
@@ -503,6 +500,7 @@ p {
     margin-bottom: 10px;
 }
 
+/*--------------------------------- About us*/
 .about-img {
     margin-top: 25px;
     margin-bottom: 25px;
@@ -522,6 +520,7 @@ p {
     text-align: center;
     margin-top: 30px;
 }
+
 /*--------------------------------- Footer*/
 
 footer {

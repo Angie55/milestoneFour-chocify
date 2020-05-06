@@ -363,7 +363,7 @@ p {
 }
 
 .product-title {
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 .product-intro {
@@ -396,6 +396,10 @@ p {
 
 .choc-img {
     margin-bottom: 20px;
+}
+
+.choc-type {
+    margin-top: 20px;
 }
 
 /*--------------------------------- View cart page*/

@@ -1,6 +1,8 @@
 {% load staticfiles %}
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,7 +26,6 @@
     <!--Block JS for checkout page to use Stripe to take order payments-->
     {% block head_js %}
     {% endblock head_js %}
-    
 </head>
 
 <body>
@@ -43,20 +44,9 @@
                 <button type="search" class="btn search-btn"><i class="fas fa-search" title="Search"></i></button>
             </form>
             <ul class="navbar-nav">
-                <!--category selection dropdown list-->
+                <!--Shop link to products page-->
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle nav-link-colour" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Shop
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item nav-link-colour" href="{% url 'products' %}">Shop All</a>
-                    <a class="dropdown-item nav-link-colour" href="#">Fruit</a>
-                    <a class="dropdown-item nav-link-colour" href="#">Vegetables</a>
-                    <a class="dropdown-item nav-link-colour" href="#">Meals</a>
-                    <a class="dropdown-item nav-link-colour" href="#">Romantic</a>
-                    <a class="dropdown-item nav-link-colour" href="#">Tools</a>
-                    <a class="dropdown-item nav-link-colour" href="#">Household items</a>
-                    </div>
+                    <a class="nav-link nav-link-colour" href="{% url 'products' %}">Shop</a>
                 </li>
                 <!--nav items that dispay depending on if the user is logged in or out-->
                 {% if user.is_authenticated %}
@@ -75,7 +65,7 @@
                 </li>
             {% endif %}
             </ul>
-            <!--shopping cart icon-->
+            <!--Shopping cart icon that displays number of items in cart if any-->
             <a class="nav-link nav-link-colour nav-icon" href="{% url 'view_cart' %}">
                 <i class="fas fa-shopping-cart" title="Cart"></i>
                 {% if product_count > 0 %}
@@ -101,7 +91,6 @@
 
     <!--Footer-->
     <footer class="container-fluid">
-        
                 <div class="row">
                     <div class="col-md-4 col-sm-12 footer-content">
                         <ul>

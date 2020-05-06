@@ -2,7 +2,7 @@
 {% load static %}
 {% block content %}
 
-<div class="container-fluid individual-product-width margin-top-50px">
+<div class="container-fluid individual-product-width margin-top-50px marg-bottom-40">
     <!--Top image and intro section-->
     <section>
         <div class="row">
@@ -45,7 +45,7 @@
     </section>
     <!--Middle details section-->
     <section>
-        <div class="row">
+        <div class="row marg-bottom-40">
             <div class="col-12">
                 <div class="row detail-ingred">
                     <div class="col-md-12 col-xl-6 ">
@@ -60,13 +60,29 @@
             </div>
         </div>
     </section>
-    <!--Bottom delivery section-->
+
     <section>
-        <div class="row delivery-details">
-            <div class="col-12">
-                <h3 class="indiv-prod-headers">Delivery</h3>
-                <p></p>
+        <h3 class="center-text pink-text">Chocolate types in {{ products.title }}</h3>
+        <div class="row justify-content-center choc-display">
+            {% if products.milk_choc %}
+            <div class="col-12 col-md-3 choc-img">
+                <img class="product-img" src="/static/images/milk_choc.jpg">
             </div>
+            {% endif %}
+            {% if products.white_choc %}
+            <div class="col-12 col-md-3 choc-img">
+                <img class="product-img" src="/static/images/white_choc.jpg">
+            </div>
+            {% endif %}
+            
+            {% if products.dark_choc %}
+            <div class="col-12 col-md-3 choc-img">
+                <img class="product-img" src="/static/images/dark_choc.jpg">
+            </div>
+            {% endif %}
+        </div>
+        <div class="row justify-content-center">
+            <a href="{% url 'products' %}" class="back-all-prods">Back to all products</a>
         </div>
     </section>
 </div>    

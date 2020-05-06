@@ -25,7 +25,7 @@ p {
 }
 
 .nav-link-colour:hover {
-    color: #43281e;
+    color: #baa999;
 }
 
 .navbar-toggler-icon {
@@ -121,6 +121,10 @@ p {
 .pink-link:hover{
     color: #baa999;
     text-decoration: none;
+}
+
+.pink-text {
+    color: #f09583;
 }
 
 .back-to-top-link, .back-all-prods {
@@ -385,11 +389,13 @@ p {
     padding-top: 10px;
 }
 
-.delivery-details {
+.choc-display {
     margin-top: 50px;
-    margin-bottom: 50px;
-    border-top: solid 2px #f09583;
-    border-bottom: solid 2px #f09583;
+    margin-bottom: 30px;
+}
+
+.choc-img {
+    margin-bottom: 20px;
 }
 
 /*--------------------------------- View cart page*/

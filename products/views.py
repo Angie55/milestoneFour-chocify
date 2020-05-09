@@ -8,7 +8,7 @@ def all_products(request):
     Accesses all products and categories in the database.
     The products are displayed 9 per page.
     '''
-    products = Product.objects.all()
+    products = Product.objects.all().order_by("-id")
     categories = Category.objects.all().order_by("id")
     # Pagination code
     page = request.GET.get('page', 1)

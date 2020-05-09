@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load staticfiles %}
 {% block page_title %}Shop all{% endblock %}
 {% block page_heading %}Shop all{% endblock %}
 {% block content %}
@@ -8,7 +9,7 @@
         <div class="row justify-content-center category-links ">
             {% for category in categories %}
             <div class="col-sm-6 col-md-3 col-lg-2 cat-link">
-                <img class="img-fluid product-img" src="{{ MEDIA_URL }}{{ category.image }}">
+                <a href="{{category.get_absolute_url}}"><img class="img-fluid product-img" src="{{ MEDIA_URL }}{{ category.image }}"></a>
                 <a class=" btn btn-block cat-link-btn" href="{{category.get_absolute_url}}" role="button">{{ category.name }}</a>
             </div>
             {% endfor %}
@@ -22,8 +23,8 @@
             {% for product in products %}
             <div class="col-xs-12 col-md-4 card product-block">
                 <!--Image, title and price display-->
-                <img class="img-fluid product-img" src="{{ MEDIA_URL }}{{ product.image1 }}">        
-                <a href="{{ product.get_absolute_url }}"><h5 class="product-title-link">{{ product.title }}</h5></a>    
+                <a href="{{ product.get_absolute_url }}"><img class="img-fluid product-img" src="{{ MEDIA_URL }}{{ product.image1 }}"></a>
+                <a class="product-title-link" href="{{ product.get_absolute_url }}"><h5>{{ product.title }}</h5></a>    
                 <p class="product-block-price"><i class="fas fa-pound-sign pound-sign"></i>{{ product.price }}</p>
                 <!--Add to cart form--> 
                 <form method="post" action="{% url 'add_to_cart' product.id %}">

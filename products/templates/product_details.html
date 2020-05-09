@@ -2,7 +2,7 @@
 {% load static %}
 {% block content %}
 
-<div class="container-fluid individual-product-width margin-top-50px marg-bottom-40">
+<div class="container-fluid individual-product-width marg-top-50 marg-bottom-50">
     <!--Top image and intro section-->
     <section>
         <div class="row">
@@ -31,8 +31,8 @@
             </div>
             <!--Products title, price and introduction-->
             <div class="col-md-12 col-xl-6 indiv-prod-top-right">
-                <h3 class="indiv-prod-headers product-title">{{ products.title }}</h3>
-                <p class="product-details-price"><i class="fas fa-pound-sign pound-sign"></i>{{ products.price }}</p>
+                <h3 class="pink-text marg-top-30">{{ products.title }}</h3>
+                <p class="product-details-price pink-text"><i class="fas fa-pound-sign pound-sign"></i>{{ products.price }}</p>
                 <!--Add to cart form-->
                 <form method="post" action="">
                     <div class="input-group">
@@ -42,7 +42,7 @@
                         </span>
                     </div>
                 </form>
-                <p class="product-intro">{{ products.introduction }}</p>
+                <p class="marg-top-50">{{ products.introduction }}</p>
             </div>  
         </div>
     </section>
@@ -50,7 +50,7 @@
     <section>
         <div class="row marg-bottom-40">
             <div class="col-12">
-                <div class="row detail-ingred">
+                <div class="row marg-top-50">
                     <div class="col-md-12 col-xl-6 ">
                         <h3 class="indiv-prod-headers">Details</h3>
                         <p class="prod-info">{{ products.details }}</p>
@@ -66,7 +66,7 @@
 
     <section>
         <h3 class="center-text pink-text">Chocolate types in {{ products.title }}</h3>
-        <div class="row justify-content-center choc-display">
+        <div class="row justify-content-center marg-top-50">
             {% if products.milk_choc %}
             <div class="col-12 col-md-3 choc-img">
                 <img class="product-img" src="/static/images/milk_choc.jpg">

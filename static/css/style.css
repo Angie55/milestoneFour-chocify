@@ -145,8 +145,20 @@ p {
     margin-top: 40px;
 }
 
-.margin-top-50px {
+.marg-top-50 {
     margin-top: 50px;
+}
+
+.marg-bottom-50 {
+    margin-bottom: 50px;
+}
+
+.marg-top-30 {
+    margin-top: 30px;
+}
+
+.marg-bottom-30 {
+    margin-bottom: 30px;
 }
 
 
@@ -242,29 +254,10 @@ p {
 
 /*--------------------------------- Profile page*/
 
-.profile-update {
-    margin-top: 40px;
-}
 
 /*--------------------------------- All products page*/
 
-.category-links {
-    text-align: center;
-    margin-top: 50px;
-    margin-bottom: 30px;
-}
-
-.cat-link {
-    margin-top: 20px;
-}
-
-.product-block {
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
-
-.product-title-link {
-    color: #f09583;
+.cat-link, .product-title-link {
     margin-top: 20px;
 }
 
@@ -273,7 +266,6 @@ p {
 }
 
 .product-block-price {
-    color:#f09583;
     font-size: 1.25em;
     margin-top: 10px;
 }
@@ -308,11 +300,6 @@ p {
 
 .product-block-hr {
     margin-top: 50px;
-}
-
-.pagination-block {
-    margin-top: 40px;
-    margin-bottom: 20px;
 }
 
 .page-num {
@@ -362,36 +349,14 @@ p {
     margin-top: 10px;
 }
 
-.product-title {
-    margin-top: 30px;
-}
-
-.product-intro {
-    margin-top: 50px;
-}
-
-.indiv-prod-headers {
-    color: #f09583;
-}
-
 .product-details-price {
-    color:#f09583;
     font-size: 1.25em;
     margin-top: 30px;
     margin-bottom: 30px;
 }
 
-.detail-ingred {
-    margin-top: 50px;
-}
-
 .prod-info {
     padding-top: 10px;
-}
-
-.choc-display {
-    margin-top: 50px;
-    margin-bottom: 30px;
 }
 
 .choc-img {
@@ -403,15 +368,6 @@ p {
 }
 
 /*--------------------------------- View cart page*/
-.cart-page {
-    margin-bottom: 50px;
-}
-
-.cart-contents {
-    margin-top: 30px;
-    margin-bottom: 50px;
-}
-
 .cart-img {
     background-size: contain;
     background-position: center center;
@@ -434,7 +390,7 @@ p {
 }
 
 .cart-form {
-    margin-top: 15px;
+    margin-top: 25px;
 }
 
 .qty-input {
@@ -469,9 +425,7 @@ p {
 }
 
 .empty-cart {
-    text-align: center;
     color:#43281e;
-    margin-top: 50px;
 }
 
 .empty-cart-btn {

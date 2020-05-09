@@ -7,20 +7,20 @@
 
 <!--Code that displays when there are items in the cart-->
 {% if product_count > 0 %}
-<div class="container-fluid cart-width-container short-content cart-page">
+<div class="container-fluid cart-width-container short-content marg-bottom-50">
     <!--Displays items added to the cart-->
-    <div class="row cart-contents">
+    <div class="row marg-bottom-50 marg-top-30">
         {% for item in cart_items %}
         <div class="col-12 col-md-2 cart-items">
             <div class="cart-img" style="background-image: url('{{ MEDIA_URL }}{{ item.product.image1 }}')"></div>
         </div>
         <div class="col-12 col-md-4 cart-items">
-            <a href="{{ product.get_absolute_url }}"><h5 class="cart-info cart-title pink-link">{{ item.product.title }}</h5></a>
+            <a class="pink-link" href="{{ product.get_absolute_url }}"><h5 class="cart-info cart-title">{{ item.product.title }}</h5></a>
         </div>
         <div class="col-12 col-md-2 cart-items">
             <p class="cart-info"><i class="fas fa-pound-sign cart-pound-sign"></i>{{ item.product.price }}</p>
         </div>
-        <div class="col-12 col-md-4 cart-items cart-info">
+        <div class="col-12 col-md-4 cart-items">
             <!--Form to adjust number of each product in the cart-->
             <form class="form-inline justify-content-center cart-form" method="post" action="{% url 'adjust_cart' item.id %}">
                 {% csrf_token %}
@@ -54,7 +54,7 @@
 <!--Code that displays when there are no items in the cart-->
 {% if product_count == 0 %}
 <div class="container-fluid short-content">
-    <h2 class="empty-cart">Your cart is empty</h2>
+    <h2 class="empty-cart marg-top-50 center-text">Your cart is empty</h2>
     <div class="row justify-content-center ">
         <a href="{% url 'products' %}" class="btn blue-btn empty-cart-btn" role="button">Shop</a>
         <a href="{% url 'index' %}" class="btn blue-btn empty-cart-btn" role="button">Home</a>

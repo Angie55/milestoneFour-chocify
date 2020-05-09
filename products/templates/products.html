@@ -3,10 +3,10 @@
 {% block page_title %}Shop all{% endblock %}
 {% block page_heading %}Shop all{% endblock %}
 {% block content %}
-<div class="container-fluid page-width-container marg-bottom-40">
+<div class="container-fluid page-width-container">
     <!--Individual category links as buttons-->
     <section class="d-none d-md-block">
-        <div class="row justify-content-center category-links ">
+        <div class="row justify-content-center marg-bottom-50">
             {% for category in categories %}
             <div class="col-sm-6 col-md-3 col-lg-2 cat-link">
                 <a href="{{category.get_absolute_url}}"><img class="img-fluid product-img" src="{{ MEDIA_URL }}{{ category.image }}"></a>
@@ -21,11 +21,11 @@
     <section>
         <div class="row justify-content-center">
             {% for product in products %}
-            <div class="col-xs-12 col-md-4 card product-block">
+            <div class="col-xs-12 col-md-4 card marg-bottom-30 marg-top-30">
                 <!--Image, title and price display-->
                 <a href="{{ product.get_absolute_url }}"><img class="img-fluid product-img" src="{{ MEDIA_URL }}{{ product.image1 }}"></a>
-                <a class="product-title-link" href="{{ product.get_absolute_url }}"><h5>{{ product.title }}</h5></a>    
-                <p class="product-block-price"><i class="fas fa-pound-sign pound-sign"></i>{{ product.price }}</p>
+                <a class="product-title-link pink-link" href="{{ product.get_absolute_url }}"><h5>{{ product.title }}</h5></a>    
+                <p class="product-block-price pink-text"><i class="fas fa-pound-sign pound-sign"></i>{{ product.price }}</p>
                 <!--Add to cart form--> 
                 <form method="post" action="{% url 'add_to_cart' product.id %}">
                     {% csrf_token %}
@@ -43,7 +43,7 @@
     </section>
     <!--Pagination-->
     <section>
-        <div class="row justify-content-center margin-top-50px">
+        <div class="row justify-content-center marg-top-50 marg-bottom-40">
             {% if products.has_other_pages %}
             <ul class="pagination">
                 <!--Arrow that is an active link if there is a previous page and disabled when not-->
@@ -73,7 +73,7 @@
 
     <!--Back to top of page link-->
     <div class="row justify-content-center">
-        <a href="#back-to-top" class="back-to-top-link">Back to top</a>
+        <a href="#back-to-top" class="back-to-top-link marg-bottom-50">Back to top</a>
     </div>
 </div>
 

@@ -8,20 +8,23 @@
         <div class="row">
             <div class="col-md-12 col-xl-6">
                 <!--Main image-->
-                <img class="product-img" src="{{ MEDIA_URL }}{{ products.image1 }}">
+                <img id="main-img" class="product-img" src="{{ MEDIA_URL }}{{ products.image1 }}">
                 <!--Image thumbnails-->
                 <div class="row img-thumbnails">
                     <div class="col-3">
-                        <img class="product-img" src="{{ MEDIA_URL }}{{ products.image2 }}">
+                        <img class="product-img prod-thumb" src="{{ MEDIA_URL }}{{ products.image1 }}">
+                    </div>
+                    <div class="col-3">
+                        <img class="product-img prod-thumb" src="{{ MEDIA_URL }}{{ products.image2 }}">
                     </div>
                     {% if products.image3 %}
                     <div class="col-3">
-                        <img class="product-img" src="{{ MEDIA_URL }}{{ products.image3 }}">
+                        <img class="product-img prod-thumb" src="{{ MEDIA_URL }}{{ products.image3 }}">
                     </div>
                     {% endif %}
                     {% if products.image4 %}
                     <div class="col-3">
-                        <img class="product-img" src="{{ MEDIA_URL }}{{ products.image4 }}">
+                        <img class="product-img prod-thumb" src="{{ MEDIA_URL }}{{ products.image4 }}">
                     </div>
                     {% endif %}
                 </div>
@@ -88,6 +91,8 @@
             <a href="{% url 'products' %}" class="back-all-prods">Back to all products</a>
         </div>
     </section>
-</div>    
+</div>  
+
+
         
 {% endblock %}

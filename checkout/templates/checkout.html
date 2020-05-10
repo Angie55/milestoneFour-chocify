@@ -15,7 +15,7 @@
 {% endblock %}
 
 {% block content %}
-<div class="container-fluid cart-width-container">
+<div class="container-fluid cart-width-container marg-top-30 marg-bottom-50">
     <!--This section displays the items the customer is about to purchase from their cart-->
     <section>
         <div class="row row-flex cart-contents justify-content-center">
@@ -24,7 +24,7 @@
                     <div class="cart-img" style="background-image: url('{{ MEDIA_URL }}{{ item.product.image1 }}')"></div>
                 </div>
                 <div class="col-12 col-md-8 cart-items">
-                    <h5 class="cart-info">{{ item.product.title }}</h5>
+                    <h5 class="cart-info cart-title">{{ item.product.title }}</h5>
                 </div>
                 <div class="col-12 col-md-2 cart-items">
                     <p class="cart-info"><i class="fas fa-pound-sign cart-pound-sign"></i>{{ item.product.price }}</p>
@@ -45,7 +45,7 @@
 
     <section>
         <!--This section displays the forms for the customer to fill to complete the order-->
-        <form role="form" method="post" id="payment-form" class="margin-top-50px" action="{% url 'checkout' %}">
+        <form role="form" method="post" id="payment-form" class="marg-top-50" action="{% url 'checkout' %}">
             <!--Stripe error messages display-->
             <div id="credit-card-errors" style="display: none;">
                 <div class="alert-message block-message error" id="stripe-error-message"></div>
@@ -55,23 +55,23 @@
                 <div class="row">
                     <!--Form for contact and shipping information-->
                     <div class="form-group col-md-6">
-                        <h4 class="checkout-headings">Personal & shipping info:</h4>
+                        <h4 class="marg-bottom-20 pink-text">Personal & shipping info:</h4>
                         {{ order_form | as_bootstrap }}
                     </div>
                     <!--Form for card details to make payment-->
                     <div class="form-group col-md-6">
-                        <h4 class="checkout-headings">Payment Information:</h4>
+                        <h4 class="marg-bottom-20 pink-text">Payment Information:</h4>
                         {{ payment_form | as_bootstrap }}
                         {% csrf_token %}
                         <div class="form-group col-md-12">
-                            <input class=" btn blue-btn pay-btn" id="submit_payment_btn" name="commit" type="submit" value="Submit Payment">
+                            <input class=" btn blue-btn marg-top-30" id="submit_payment_btn" name="commit" type="submit" value="Submit Payment">
                         </div>
                     </div>
                 </div>
             </div>
 
         </form>
-        
+        <hr>
     </section>
 
 </div>

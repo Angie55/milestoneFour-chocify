@@ -14,6 +14,7 @@ p {
 }
 
 /*--------------------------------- Main Navigation*/
+
 .nav {
     border-bottom: 8px solid #43281e;
 }
@@ -67,6 +68,7 @@ p {
 }
 
 /*--------------------------------- General*/
+
 .page-width-container, .cart-width-container {
     max-width: 80%;
 }
@@ -169,13 +171,21 @@ body styling. This code is then added to any short
     margin-bottom: 30px;
 }
 
+.marg-top-20 {
+    margin-top: 20px;
+}
+
+.marg-bottom-20 {
+    margin-bottom: 20px;
+}
+
 /*--------------------------------- Homepage*/
+
 .hero {
     margin-top: -30px;
 }
 
 .home-intro {
-    margin-top: 20px;
     padding: 10px 20px;
 }
 
@@ -218,6 +228,7 @@ body styling. This code is then added to any short
 }
 
 /*--------------------------------- Login/register/profile pages*/
+
 .general-form-block {
     max-width: 40%;
     margin: 70px auto 150px;
@@ -241,18 +252,12 @@ body styling. This code is then added to any short
 }
 
 /*--------------------------------- Password reset pages*/
+
 .email-input {
     min-width:80%;
 }
 
-/*--------------------------------- Profile page*/
-
-
 /*--------------------------------- All products page*/
-
-.cat-link, .product-title-link {
-    margin-top: 20px;
-}
 
 .card {
     border: none;
@@ -352,15 +357,8 @@ body styling. This code is then added to any short
     padding-top: 10px;
 }
 
-.choc-img {
-    margin-bottom: 20px;
-}
-
-.choc-type {
-    margin-top: 20px;
-}
-
 /*--------------------------------- View cart page*/
+
 .cart-img {
     background-size: contain;
     background-position: center center;
@@ -427,29 +425,12 @@ body styling. This code is then added to any short
 
 /*--------------------------------- Checkout*/
 
-.checkout-cart-items {
-    margin-top: 20px;
-}
-
-.checkout-headings {
-    margin-bottom: 20px;
-}
-
 .order-total {
     font-size: 1.25em;
-    margin-top: 25px;
+    margin-top: 35px;
 }
 
-.pay-btn {
-    margin-top: 30px;
-}
-
-/*--------------------------------- About us/Contact us/Privacy/Terms*/
-
-.info-pages-container {
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
+/*--------------------------------- About us/Privacy/Terms*/
 
 .sub-headers {
     color: #f09583;
@@ -458,6 +439,7 @@ body styling. This code is then added to any short
 }
 
 /*--------------------------------- About us*/
+
 .about-img {
     margin-top: 25px;
     margin-bottom: 25px;
@@ -465,17 +447,13 @@ body styling. This code is then added to any short
 }
 
 /*--------------------------------- Contact us*/
+
 .contact-block {
     max-width: 60%;
     margin: 40px auto 100px;
     padding: 30px;
     border: solid 1px #f09583;
     border-radius: 10px;
-}
-
-.contact-text {
-    text-align: center;
-    margin-top: 30px;
 }
 
 /*--------------------------------- Footer*/
@@ -486,11 +464,7 @@ footer {
     flex-shrink: 0;
 }
 
-.footer-content {
-    margin-top: 20px;
-}
-
-.footer-content ul {
+.footer-list {
     list-style-type: none;
 }
 
@@ -515,6 +489,7 @@ footer {
 }
 
 /*---------------------------------Media Queries mobile and tablet screen*/
+
 @media (max-width:450px) {
     .sm-display-none {
         display: none;
@@ -534,7 +509,7 @@ footer {
 @media (max-width:575px) {
     .update-btn {
         margin-top: 10px;
-    }
+        }
 }
 
 @media (max-width:767px) {  
@@ -565,7 +540,10 @@ footer {
         }
     .cart-total-hr {
         display: none;
-        }   
+        }
+    .order-total {
+        margin-top: 15px;
+        }
     }
 
 @media (max-width:991px) {
@@ -589,7 +567,14 @@ footer {
     }
 }
 
+@media (min-width:768px) {
+.product-block-hr, .cart-hr {
+    display: none;
+    }
+}
+
 /*---------------------------------Media Queries large screen*/
+
 @media (min-width:1200px) {
     .cart-width-container {
         max-width: 60%;
@@ -599,9 +584,3 @@ footer {
         padding-right: 40px;
         }       
     }
-
-@media (min-width:768px) {
-.product-block-hr, .cart-hr {
-    display: none;
-    }
-}

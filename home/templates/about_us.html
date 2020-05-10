@@ -1,5 +1,4 @@
 {% extends 'base.html' %}
-{% load static from staticfiles %}
 {% block page_title %}About us{% endblock %}
 {% block page_heading %}About us{% endblock %}
 {% block content %}
@@ -26,7 +25,7 @@
 
         <!--About us page image 1-->
         <div class="row justify-content-center">
-            <img class="img-fluid about-img" src="/static/images/about-us2.jpg" alt="Images of products including chocolate knitting, biscuits and gin and tonic">
+            <img class="img-fluid about-img" src="{% static 'images/about-us2.jpg' %}" alt="Images of products including chocolate knitting, biscuits and gin and tonic">
         </div>
 
         <!--Chocolate innovation-->
@@ -56,7 +55,7 @@
 
         <!--About us page image 2-->
         <div class="row justify-content-center">
-            <img class="img-fluid about-img" src="/static/images/about-image.jpg" alt="Images of chocolate truffles and drops in a jar, picture of the outside of the shop and staff in kitchen">
+            <img class="img-fluid about-img" src="{% static 'images/about-image.jpg' %}" alt="Images of chocolate truffles and drops in a jar, picture of the outside of the shop and staff in kitchen">
         </div>
         <hr>
 

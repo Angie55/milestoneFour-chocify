@@ -41,11 +41,11 @@ def products_by_category(request, category_id):
     Accesses all products and categories and displays all
     the products in a specific category by it's id.
     '''
-    categories = Category.objects.all()
+    category = Category.objects.all()
     products = Product.objects.all().order_by("id")
     if category_id:
         category = get_object_or_404(Category, id=category_id)
         products = products.filter(category=category)
     return render(request, "products_by_category.html", {"products": products,
-                                                         "categories":
-                                                         categories})
+                                                         "category":
+                                                         category})

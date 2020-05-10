@@ -1,16 +1,18 @@
 {% extends 'base.html' %}
-{% block page_heading %}{{ category.name }}cat{% endblock %}
+{% block title %}{{ category.name }}{% endblock %}
+{% block page_heading %}{{ category.name }}{% endblock %}
 {% block content %}
 
-<div class="container-fluid page-width-container">
+<div class="container-fluid page-width-container short-content marg-bottom-50">
+
     <!--Products display-->
     <div class="row justify-content-center">
         {% for product in products %}
-        <div class="col-xs-12 col-md-4 col-lg-3 card product-block">
+        <div class="col-xs-12 col-md-4 col-lg-3 card marg-bottom-30 marg-top-30">
             <!--Image, title and price display-->
             <img class="img-fluid product-img" src="{{ MEDIA_URL }}{{ product.image1 }}"> 
-            <a href="{{ product.get_absolute_url }}"><h5 class="product-title">{{ product.title }}</h5></a>
-            <p class="product-block-price"><i class="fas fa-pound-sign pound-sign"></i>{{ product.price }}</p>
+            <a class="product-title-link pink-link" href="{{ product.get_absolute_url }}"><h5>{{ product.title }}</h5></a>
+            <p class="product-block-price pink-text"><i class="fas fa-pound-sign pound-sign"></i>{{ product.price }}</p>
             <!--Add to cart form-->
             <form method="post" action="{% url 'add_to_cart' product.id %}">
                 {% csrf_token %}
@@ -24,6 +26,9 @@
             <hr class="product-block-hr"> 
         </div>
         {% endfor %}
+    </div>
+    <div class="row justify-content-center">
+        <a href="{% url 'products' %}" class="back-all-prods marg-top-30">Back to all products</a>
     </div>
 </div>
 

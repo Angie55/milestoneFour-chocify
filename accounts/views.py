@@ -1,7 +1,6 @@
 from django.shortcuts import render, redirect, reverse
 from django.contrib import auth, messages
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth.models import User
 from accounts.forms import UserLoginForm, UserRegistrationForm, UserUpdateForm
 
 
@@ -63,7 +62,7 @@ def registration(request):
 
 def user_profile(request):
     """
-    Renders the user's info on the profile page with a 
+    Renders the user's info on the profile page with a
     form to update their username or emails address.
     """
     if request.method == 'POST':

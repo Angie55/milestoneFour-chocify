@@ -8,10 +8,11 @@
     <!--Register form-->
     <div class="general-form-block">
         <!--Link to login-->
-        <p class="reg-spacing">Already have an account? <a href="{% url 'login' %}">Login here </a></p>
+        <p class="reg-spacing">Already have an account? <a class="pink-link" href="{% url 'login' %}">Login here </a></p>
         <hr>
         <p class="reg-spacing"><i class="fas fa-exclamation-circle reg-exclam"></i>Please note all fields are required</p>
-        <form class="login-register-form" method="POST">
+        <!--Registration form-->
+        <form class="marg-bottom-30" method="POST">
             {% csrf_token %}
             {{ registration_form | as_bootstrap  }}
             <button type="submit" class="btn blue-btn general-form-btn">Register</button>

@@ -1,21 +1,22 @@
-{% extends 'base.html' %} 
+{% extends 'base.html' %}
 {% load bootstrap_tags %}
-{% block page_title %}Login Page{% endblock %} 
-{% block page_heading %}Login{% endblock %} 
+{% block page_title %}Login Page{% endblock %}
+{% block page_heading %}Login{% endblock %}
 {% block content %}
 
 <div class="container-fluid page-width-container short-content">
     <!--Login form-->
     <div class="general-form-block">
-        <form class="login-register-form" method="POST">
+        <form class="marg-bottom-30" method="POST">
             {% csrf_token %} 
             {{ login_form | as_bootstrap }}
             <button type="submit" class="btn blue-btn general-form-btn">Login</button>
         </form>
         <!--Links to reset password or register-->
         <hr class="reg-spacing">
-        <p>Forgotton your password? <a href="{% url 'password_reset' %}">Reset password</a></p>
-        <p>Don't have an account? <a href="{% url 'registration' %}">Register here</a></p>
+        <p>Forgotton your password? <a class="pink-link" href="{% url 'password_reset' %}">Reset password</a></p>
+        <p>Don't have an account? <a class="pink-link" href="{% url 'registration' %}">Register here</a></p>
     </div>
 </div> 
+
 {% endblock %}

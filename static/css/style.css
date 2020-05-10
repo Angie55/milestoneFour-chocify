@@ -71,6 +71,11 @@ p {
     max-width: 80%;
 }
 
+/*
+ Used with display and flex direction found on 
+body styling. This code is then added to any short
+ pages to move the footer to the bottom of the page 
+ */
 .short-content {
     flex: 1 0 auto;
 }
@@ -103,6 +108,7 @@ p {
     color: white;
 }
 
+/* Also used for choc type diplay images */
 .product-img {
     border-radius: 10px;
     width: 100%;
@@ -137,6 +143,8 @@ p {
     text-decoration: none;
 }
 
+/* Spacing */
+
 .marg-bottom-40 {
     margin-bottom: 40px;
 }
@@ -160,7 +168,6 @@ p {
 .marg-bottom-30 {
     margin-bottom: 30px;
 }
-
 
 /*--------------------------------- Homepage*/
 .hero {
@@ -222,20 +229,6 @@ p {
 .reg-spacing {
     margin-top: 10px;
     margin-bottom: 30px;
-}
-
-.login-register-form {
-    margin-bottom: 30px;
-}
-
-.general-form-block a {
-    color: #f09583;
-    transition: 0.5s;
-}
-
-.general-form-block a:hover {
-    color: #ddd;
-    text-decoration: none;
 }
 
 .general-form-btn {

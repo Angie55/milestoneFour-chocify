@@ -1,6 +1,5 @@
 {% extends 'base.html' %}
 {% block page_title %}Shopping cart{% endblock %}
-{% load static from staticfiles %}
 {% load bootstrap_tags %}
 {% block page_heading %}Shopping cart{% endblock %}
 {% block content %}
@@ -25,10 +24,10 @@
             <form class="form-inline justify-content-center cart-form" method="post" action="{% url 'adjust_cart' item.id %}">
                 {% csrf_token %}
                 <div class="form-group">
-                    <label for="exampleInputAmount" class="sr-only">New Qty</label>
+                    <label for="amend-qty" class="sr-only">New Qty</label>
                     <div class="input-group">
                         <div class="input-group-addon">Qty:</div>
-                        <input name="quantity" type="number" min="0" max="999" class="form-control qty-input" placeholder="{{item.quantity}}">
+                        <input name="quantity" type="number" min="0" max="999" id="amend-qty" class="form-control qty-input" placeholder="{{item.quantity}}">
                         <div class="input-group-addon"></div>
                     </div>
                     <button type="submit" class="btn blue-btn update-btn">Update</button>

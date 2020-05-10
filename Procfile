@@ -1,0 +1,1 @@
+web: gunicorn chocify_ecommerce.wsgi:application

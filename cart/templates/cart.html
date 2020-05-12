@@ -14,7 +14,7 @@
             <div class="cart-img" style="background-image: url('{{ MEDIA_URL }}{{ item.product.image1 }}')"></div>
         </div>
         <div class="col-12 col-md-4 cart-items">
-            <a class="pink-link" href="{{ product.get_absolute_url }}"><h5 class="cart-info cart-title">{{ item.product.title }}</h5></a>
+            <a class="pink-link" href="{{ item.product.get_absolute_url }}"><h5 class="cart-info cart-title">{{ item.product.title }}</h5></a>
         </div>
         <div class="col-12 col-md-2 cart-items">
             <p class="cart-info"><i class="fas fa-pound-sign cart-pound-sign"></i>{{ item.product.price }}</p>

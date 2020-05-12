@@ -52,7 +52,7 @@ def checkout(request):
                 messages.error(request, "Thank you, your payment was successful and your order will be processed shortly")
                 request.session['cart'] = {}
                 return redirect(reverse('index'))
-            # gives them an error message if payemnt unsuccessful
+            # gives them an error message if payment unsuccessful
             else:
                 messages.error(request, "Unable to take payment")
         # prints errors where payment form filled in incorrectly

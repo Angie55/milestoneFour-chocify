@@ -23,8 +23,11 @@
                 <div class="col-12 col-md-2 cart-items">
                     <div class="cart-img" style="background-image: url('{{ MEDIA_URL }}{{ item.product.image1 }}')"></div>
                 </div>
-                <div class="col-12 col-md-8 cart-items">
+                <div class="col-12 col-md-6 cart-items">
                     <h5 class="cart-info cart-title">{{ item.product.title }}</h5>
+                </div>
+                <div class="col-12 col-md-2 cart-items">
+                    <p class="cart-info">Qty: {{item.quantity}}</p>
                 </div>
                 <div class="col-12 col-md-2 cart-items">
                     <p class="cart-info"><i class="fas fa-pound-sign cart-pound-sign"></i>{{ item.product.price }}</p>

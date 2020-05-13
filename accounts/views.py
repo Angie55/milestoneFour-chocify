@@ -33,6 +33,7 @@ def login(request):
         login_form = UserLoginForm()
     return render(request, 'login.html', {'login_form': login_form})
 
+
 def registration(request):
     """Render the registration page"""
     if request.user.is_authenticated:
@@ -49,7 +50,9 @@ def registration(request):
             # Adds a new user or displays error message
             if user:
                 auth.login(user=user, request=request)
-                messages.success(request, "You have successfully registered")
+                messages.success(request,
+                                 "You have successfully registered and are now logged in")
+                return redirect(reverse('index'))
             else:
                 messages.error(request,
                                "Unable to register your account at this time")

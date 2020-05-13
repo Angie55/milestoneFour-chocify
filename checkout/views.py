@@ -49,7 +49,7 @@ def checkout(request):
                 messages.error(request, "Your card was declined!")
             # let's customer know if they have successfully paid
             if customer.paid:
-                messages.error(request, "Thank you, your payment was successful and your order will be processed shortly")
+                messages.error(request, "Thank you, your payment was successful and your order will be processed shortly.")
                 request.session['cart'] = {}
                 return redirect(reverse('index'))
             # gives them an error message if payment unsuccessful

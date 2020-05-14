@@ -12,7 +12,7 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="">
+    <link rel="icon" type="image/png" href="{% static 'images/chocify_fav.jpg' %}">
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
     <!-- Font awesome -->
@@ -31,7 +31,9 @@
 <body>
     
     <nav class="navbar navbar-expand-lg nav">
-        <a class="navbar-brand" href="{% url 'index' %}">Chocify</a>
+        <a class="navbar-brand" href="{% url 'index' %}">
+            <img src="{% static 'images/chocify_logo.jpg' %}" alt="Chocify logo">
+        </a>
         <!--burger icon for small screen toggle menu-->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"><i class="fas fa-bars burger-icon"></i></span>

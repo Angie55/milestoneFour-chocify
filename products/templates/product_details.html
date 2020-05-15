@@ -2,7 +2,7 @@
 {% load static %}
 {% block content %}
 
-<div class="container-fluid individual-product-width marg-top-50 marg-bottom-50">
+<div class="container-fluid individual-product-width product-details marg-bottom-50">
     <!--Top image and intro section-->
     <section>
         <div class="row">
@@ -51,7 +51,7 @@
     <section>
         <div class="row marg-bottom-40">
             <div class="col-12">
-                <div class="row marg-top-50">
+                <div class="row product-details">
                     <div class="col-md-12 col-xl-6 ">
                         <h3 class="pink-text">Details</h3>
                         <p class="prod-info">{{ products.details }}</p>
@@ -67,7 +67,7 @@
 
     <section>
         <h3 class="center-text pink-text">Chocolate types in {{ products.title }}</h3>
-        <div class="row justify-content-center marg-top-50">
+        <div class="row justify-content-center product-details">
             {% if products.milk_choc %}
             <div class="col-12 col-md-3 marg-bottom-20">
                 <img class="product-img" src="/static/images/milk_choc.jpg">

@@ -64,9 +64,9 @@
             </div>
         </div>
     </section>
-
+    <!--Chocolate types used in product section-->
     <section>
-        <h3 class="center-text pink-text">Chocolate types in {{ products.title }}</h3>
+        <h3 class="center-text choc-type">Chocolate types in <span class="pink-text">{{ products.title }}</span></h3>
         <div class="row justify-content-center product-details">
             {% if products.milk_choc %}
             <div class="col-12 col-md-3 marg-bottom-20">
@@ -88,12 +88,11 @@
             </div>
             {% endif %}
         </div>
+        <!--Back to all products link-->
         <div class="row justify-content-center">
             <a href="{% url 'products' %}" class="back-all-prods">Back to all products</a>
         </div>
     </section>
 </div>  
 
-
-        
 {% endblock %}

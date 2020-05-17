@@ -185,6 +185,11 @@ body styling. This code is then added to any short
     margin-top: -30px;
 }
 
+.caption-style {
+    background-color: rgba(240, 149, 131, 0.8);
+    border-radius: 10px;
+}
+
 .home-intro {
     padding: 10px 20px;
 }
@@ -511,7 +516,13 @@ footer {
 @media (max-width:575px) {
     .update-btn {
         margin-top: 10px;
-        }
+    }
+    .carousel-caption {
+        display: none;
+    }
+    .home-intro {
+        padding: 10px 0;
+    }
 }
 
 @media (max-width:767px) {  

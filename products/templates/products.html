@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 {% block page_title %}Shop all{% endblock %}
-{% block page_heading %}Shop all{% endblock %}
 {% block content %}
 <div class="container-fluid page-width-container">
     <!--Individual category links as buttons-->
     <section class="d-none d-md-block">
+        <h2 class="page-headers">Categories</h2>
         <div class="row justify-content-center marg-bottom-50">
             {% for category in categories %}
             <div class="col-sm-6 col-md-3 col-lg-2 marg-top-20">
@@ -19,6 +19,7 @@
     <hr>
     <!--Products display-->
     <section>
+        <h2 class="page-headers">All Products</h2>
         <div class="row justify-content-center">
             {% for product in products %}
             <div class="col-xs-12 col-md-4 card marg-bottom-30 marg-top-30">
@@ -40,9 +41,8 @@
             </div>
             {% endfor %} 
         </div>
-    </section>
-    <!--Pagination-->
-    <section>
+        
+        <!--Pagination-->
         <div class="row justify-content-center marg-top-50 marg-bottom-40">
             {% if products.has_other_pages %}
             <ul class="pagination">

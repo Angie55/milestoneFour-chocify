@@ -17,11 +17,11 @@
 {% if products %}
 <div class="container-fluid page-width-container">
     <!--Individual category links, does not display for search result-->
-    <section class="d-none d-md-block">
+    <section >
         <div class="row justify-content-center marg-bottom-50">
             {% for category in categories %}
             <div class="col-sm-6 col-md-3 col-lg-2 marg-top-20">
-                <a href="{{category.get_absolute_url}}"><img class="img-fluid product-img" src="{{ MEDIA_URL }}{{ category.image }}"></a>
+                <a href="{{category.get_absolute_url}}"><img class="img-fluid product-img d-none d-md-block" src="{{ MEDIA_URL }}{{ category.image }}"></a>
                 <a class=" btn btn-block cat-link-btn" href="{{category.get_absolute_url}}" role="button">{{ category.name }}</a>
             </div>
             {% endfor %}

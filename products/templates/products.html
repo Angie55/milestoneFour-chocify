@@ -2,10 +2,22 @@
 {% load staticfiles %}
 {% block page_title %}Shop all{% endblock %}
 {% block content %}
+
+<!--Display if no search results found-->
+{% if not products %}
+<div class="container-fluid short-content no-results" >
+    <div class="center-text">
+        <h2 class="pink-text">Sorry, no results found for your search</h2>
+        <a class="btn blue-btn marg-top-30 marg-bottom-50" href="{% url 'products' %}" role="button">All Products</a>
+    </div>
+</div>
+{% endif %}
+
+<!--Display for all products page and when search results found-->
+{% if products %}
 <div class="container-fluid page-width-container">
-    <!--Individual category links as buttons-->
+    <!--Individual category links, does not display for search result-->
     <section class="d-none d-md-block">
-        <h2 class="page-headers">Categories</h2>
         <div class="row justify-content-center marg-bottom-50">
             {% for category in categories %}
             <div class="col-sm-6 col-md-3 col-lg-2 marg-top-20">
@@ -15,8 +27,8 @@
             {% endfor %}
         </div>
     </section>
-
     <hr>
+
     <!--Products display-->
     <section>
         <h2 class="page-headers">All Products</h2>
@@ -41,7 +53,7 @@
             </div>
             {% endfor %} 
         </div>
-        
+
         <!--Pagination-->
         <div class="row justify-content-center marg-top-50 marg-bottom-40">
             {% if products.has_other_pages %}
@@ -76,5 +88,6 @@
         <a href="#back-to-top" class="back-to-top-link marg-bottom-50">Back to top</a>
     </div>
 </div>
+{% endif %}
 
 {% endblock %}

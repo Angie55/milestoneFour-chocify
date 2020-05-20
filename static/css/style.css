@@ -257,6 +257,9 @@ body styling. This code is then added to any short
 }
 
 /*--------------------------------- All products page*/
+.no-results {
+    margin-top: 100px;
+}
 
 .card {
     border: none;

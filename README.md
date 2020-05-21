@@ -200,17 +200,63 @@ disclaimer are removed at mobile size as it would be too cluttered with them.
 
 #### Home
 
+- Displays a carousel of 3 hero images with an arrow for users to slide to the next image. If any area of the hero image is clicked the user
+is taken to the shop all products page.
+
+- The categories and their images are displayed, the whole image is a link to that category.
+
+- Alert display- The messages are displayed in an alert that appears above the hero slider and is faded out as the content slides up.
+
+##### Future Devs-
+
+- A carousel of all products that auto slides unto the category displays.
+
 #### All products
+
+- Category display- The image for each category and the title displays. They display from large to tablet size screens and the images are removed on mobile devices.
+
+- Pagination- 9 products are displayed at a time to avoid too much scrolling. The arrows to navigate the pages are disabled as necessary when it is the first or last page.
+
+- Add to cart- Products can be added to the cart from this page.
+
+##### Future Devs-
+
+- Filter Products- By newest to oldest and by price, highest to lowest.
+
+- Choc type display- A small circle with milk, white and dark in chocolate colours the appears in the corner of the image of the products contain that choc type.
 
 #### Product details
 
+- Images- When clicked the thumbnails become the main image. There can be up to 4 images per product and a minimum of 2.
+
+- Add to cart- Products can be added to the cart from this page.
+
+- Choc types- An image for milk, white or dark chocolate will show if it features in that product, some may feature all and some just one. It will be useful for users with particular tastes. Some appear to be milk but may just be dark. Some seem like that could have a milk centre but are all white chocolate.
+
+- Link- A link back to the all products page has been added to avoid use of the back option on the browser.
+
 #### Products by category
+
+- Displays all the products in that category.
+
+- Add to cart- Products can be added to the cart from this page.
 
 #### Search results
 
+- Products can be searched by typing a word, it will display in the results if that word or the correct sequence of letters are in the title.
+
+##### Future Devs-
+
+- Search to include tags that were added for each product as part of the search results.
+
+- When user search it would be good for them to see the text 'Search results for .....' with the word they searched so they can see how they spelt it.
+it would be good for this to also show when no products found with 'No results found for ....'.
+
+- Make better use of space on page when no search results found with a carousel of products or and advert.
+
 #### Cart
 
-- Summery- of products added with image, price. quantity and title as link to the details for that product if the user wants to read
+- Summery- of products added with image, price, quantity and title as link to the details for that product if the user wants to read
 more or double check anything.
 
 - Amending cart items- The number of each product to purchase is displayed and can be amended to a different amount.
@@ -225,10 +271,9 @@ more or double check anything.
 
 - Total- of order displays under summery and just above payment where it can easily be viewed before payment is made.
 
-- Address and payment details- user can fill in their details and pay for their order which is done securely with Stripe.
+- Address and payment details- user can fill in their details and pay for their order, which is done securely with Stripe.
 
 - Stripe- used for secure payment of products.
-
 
 #### Login and Register
 
@@ -240,7 +285,8 @@ details in their profile page.
 #### Profile
 
 - Displays current username and email on users account.
-- The form can be used to amend one or both.
+
+- The form can be used to amend username or email or both.
 
 #### Reset password
 
@@ -282,7 +328,6 @@ For this project I used the standard user model by Django
     image2 = models.ImageField(upload_to='images', blank=True, null=True)
     image3 = models.ImageField(upload_to='images', blank=True, null=True)
     image4 = models.ImageField(upload_to='images', blank=True, null=True)
-
 
 #### Checkout
 

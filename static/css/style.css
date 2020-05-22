@@ -16,6 +16,7 @@ p {
 /*--------------------------------- Main Navigation*/
 
 .nav {
+    min-height: 80px;
     border-bottom: 8px solid #43281e;
 }
 

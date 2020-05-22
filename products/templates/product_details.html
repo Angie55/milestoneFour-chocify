@@ -70,20 +70,20 @@
         <div class="row justify-content-center product-details">
             {% if products.milk_choc %}
             <div class="col-12 col-md-3 marg-bottom-20">
-                <img class="product-img" src="/static/images/milk_choc.jpg">
+                <img class="product-img" src="{% static 'images/milk_choc.jpg' %}">
                 <h6 class="center-text pink-text marg-top-20">Milk choc</h6>
             </div>
             {% endif %}
             {% if products.white_choc %}
             <div class="col-12 col-md-3 marg-bottom-20">
-                <img class="product-img" src="/static/images/white_choc.jpg">
+                <img class="product-img" src="{% static 'images/white_choc.jpg' %}">
                 <h6 class="center-text pink-text marg-top-20">White choc</h6>
             </div>
             {% endif %}
             
             {% if products.dark_choc %}
             <div class="col-12 col-md-3 marg-bottom-20">
-                <img class="product-img" src="/static/images/dark_choc.jpg">
+                <img class="product-img" src="{% static 'images/dark_choc.jpg' %}">
                 <h6 class="center-text pink-text marg-top-20">Dark choc</h6>
             </div>
             {% endif %}

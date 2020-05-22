@@ -396,6 +396,7 @@ body styling. This code is then added to any short
 }
 
 .qty-input {
+    max-width: 50%;
     margin-left: 10px;
     margin-right: 10px;
 }

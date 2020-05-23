@@ -142,7 +142,7 @@ so they stand out more.
 - A simple colour transition is used when hovering over buttons and links and the feedback is keep the same across the site.
 - Horizontal rules are used to separate content or at the end so the eye can easily navigate the content.
 - Images are kept large where possible to show the details in the products.
-- Pages such a registration, login, profile, resetting password etc.,are all kept very simple so the focus is on what the user is on that page for.
+- Pages such a registration, login, profile, resetting password etc. are all kept very simple so the focus is on what the user is on that page for.
 
 #### Colours
 

@@ -170,8 +170,19 @@ The blue and greens used for buttons are fairly standard to action buttons and t
 
 ### Wireframes
 
-
-
+- [Home](https://i.ibb.co/GtbHqtN/home.jpg)
+- [Nav/Footer](https://i.ibb.co/0FSN8Qb/nav-footer.jpg)
+- [All Products](https://i.ibb.co/n7Rsy06/all-products.jpg)
+- [Search Results](https://i.ibb.co/3SJ48F0/search.jpg)
+- [Categories](https://i.ibb.co/SnR6PHM/products-by-category.jpg)
+- [Products details](https://i.ibb.co/KLc693G/product-details.jpg)
+- [Cart](https://i.ibb.co/YyLSLhn/cart.jpg)
+- [Checkout](https://i.ibb.co/GQWqy4s/checkout.jpg)
+- [Login](https://i.ibb.co/72c37qQ/login.jpg)
+- [Register](https://i.ibb.co/Cstch32/register.jpg)
+- [Profile](https://i.ibb.co/gDXQxQG/profile.jpg)
+- [Info pages](https://i.ibb.co/BL3F46G/info-pages.jpg)
+- [Contact us](https://i.ibb.co/NnfDhXz/contact-us.jpg)
 
 ## Features
 

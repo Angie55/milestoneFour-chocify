@@ -1,9 +1,13 @@
 [![Build Status](https://travis-ci.org/Angie55/milestoneFour-chocify.svg?branch=master)](https://travis-ci.org/Angie55/milestoneFour-chocify)
 
+# [Chocify](https://chocify-milestone-four.herokuapp.com/)
+
 Chocify is an ecommerce store selling novelty chocolate gifts. It was created as a final project of a Code Institute web development diploma
 to display skills learnt over the course. The overall aim is to build a custom built Django project composed of multiple apps. Chocify is a 
 fictional brand using images and content from 2 real brands. This project was designed to show case the products in an appealing way that 
 encourages the customer to browse and make a purchase. The focus is on the user having an effortless experience with a design that feels intuitive.
+
+### Visit [Chocify](https://chocify-milestone-four.herokuapp.com/)
 
 ## Developer goals
 
@@ -37,6 +41,7 @@ required in browsing and purchasing products with each app.
         - [Styling](#styling)
         - [Colours](#colours)
     - [Wireframes](#wireframes)
+
 2. [Features](#features)
     - [Existing features](#existing-features)
         - [Navbar](#navbar)
@@ -52,18 +57,25 @@ required in browsing and purchasing products with each app.
         - [Profile](#profile)
         - [Reset password](#reset-password)
         - [Contact us](#contact-us)
-        
 
 3. [Information Architecture](#information-architecture)
-    - [Databases](#databases)
     - [Data models](#data-models)
         - [User](#user)
         - [Products app models](#products-app-models)
         - [Order app models](#order-app-models)
 
-4. [Deployment](#deployment)
-        - [Run project locally](#run-project-locally)
-        - [Heroku Deployment](#heroku-deployment)
+4. [Technologies Used](#technologies-used)
+    - [Tools](#tools)
+    - [Databases](#databases)
+    - [Libraries](#libraries)
+    - [Languages](#languages)
+
+5. [Testing](#testing)
+    - Testing written in a seperate file [TESTING.md](TESTING.md)
+
+6. [Deployment](#deployment)
+    - [Run project locally](#run-project-locally)
+    - [Heroku Deployment](#heroku-deployment)
 
 ---
 
@@ -327,11 +339,6 @@ model so an admin could tick it as it would display with the order summery.
 
 ## Information Architecture
 
-### Databases
-
-Django works with SQL databases and during development I used the standard sqlite3 database installed with Django.
-When deployed, the SQL database provided by Heroku is a PostgreSQL database.
-
 ### Data models
 
 #### User
@@ -430,6 +437,14 @@ For this project I used the standard user model by Django
 - [Bootstrap](https://getbootstrap.com/) - Used to help with the layout, navigation and making the site responsive as main design framework.
 - [FontAwesome](https://www.bootstrapcdn.com/fontawesome/) - To provide icons.
 - [Google Fonts](https://fonts.google.com/) - To style the website fonts.
+
+### Languages
+
+- This project uses HTML, CSS, JavaScript and Python programming languages.
+
+## Testing
+
+- Testing written in a seperate file [TESTING.md](TESTING.md)
 
 ## Deployment
 

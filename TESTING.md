@@ -1,4 +1,7 @@
-## Testing
+# [Chocify](https://chocify-milestone-four.herokuapp.com/) Testing
+
+
+This is the testing write up for the main [README.md](README.md) file for the [Chocify](https://chocify-milestone-four.herokuapp.com/).
 
 ### Automated testing
 
@@ -9,6 +12,13 @@ The following validation services and linter were used to check the validity of 
 - [W3C CSS validation](https://jigsaw.w3.org/css-validator/)- was used to validate CSS.
 
 - [JShint](https://jshint.com/)- was used to validate JavaScript.
+
+- The python code was validated within the [Gitpod IDE](https://www.gitpod.io/).
+
+### Travis
+
+- Travis was used throughout the unit testing of this project to provide continuous integration with the deployed site. You can
+find all the info needed to set [Travis](https://docs.travis-ci.com/user/tutorial/) up in the documentation.
 
 ### Manual testing
 
@@ -70,7 +80,7 @@ back as it need to be simpler on the small screen. Categories links in the main 
 
 - Returns products with word searched for in the title.
 
-- Returns products when partial word typed such as 'fi' which shoed fish and truf showed truffles. A single letter can be
+- Returns products when partial word typed such as 'fi' which showed fish and 'truf' showed truffles. A single letter can be
 used.
 
 - If no products found the user sees a message to confirm this and a link to the all products page.
@@ -151,8 +161,10 @@ in the accounts view and amending that fixed the issue.
 - I receive feedback if I use a username that already exists.
 - I receive feedback if the passwords do not match.
 - I receive feedback if not all the fields are filled, as all are required.
-- I receive feedback if my password is too short and how many characters it should have. 
+- I receive feedback if my password is too short and how many characters it should have.
+- I receive feedback if the password is too similar to the username.
 - I can clearly see a link to login if I already have an account.
+
 
 ##### Bugs (not fixed)
 - Lets me use the same email address as another account.
@@ -170,6 +182,7 @@ home page where the alert displays well.
 - I can edit either my username or password and I can also amend both.
 - I receive feedback if the email address is not valid.
 - I receive feedback if one field does not contain content.
+- I can't use a username that already exists.
 - My Profile is immediately updated and I see the changes in the profile page.
 
 ##### Bugs (fixed)
@@ -178,6 +191,13 @@ It now redirects the user to the homepage, this is not ideal but the message dis
 feedback when the details are updated as you can see the changes in front of you but I think the feedback is required so the user gets
 clear feedback. They can easily go into the Profile again if they want to check.
 
+##### Bugs (not fixed)
+- If the user tries to change the username to one that already exist, it will not work and the there is feedback within the form however
+the display at the top of the page changes to the new user name. The users new username will not be saved and they will need the old one
+to login but may think it has changed. If they come out of and go back into the profile page, they will see the old
+username. To resolve this the username at the top of the page should only update if the update is successful or a clear pop up message
+should let the user know that this username will not be saved and they should try another. 
+ 
 #### Contact us
 
 - I am able to type in all fields.
@@ -187,3 +207,8 @@ clear feedback. They can easily go into the Profile again if they want to check.
 - The form is cleared after pressing send.
 - The form and the feedback look good on all screen sizes.
 - An email is received in the connected inbox.
+- Image of filled contact form and email received:
+
+<div align="center">
+    <img src="https://i.ibb.co/cyhHbJN/contact-email.jpg" alt="contact-email" border="0">
+</div>

@@ -37,7 +37,7 @@
             <div class="col-xs-12 col-md-4 card marg-bottom-30 marg-top-30">
                 <!--Image, title and price display-->
                 <a href="{{ product.get_absolute_url }}"><img class="img-fluid product-img" src="{{ MEDIA_URL }}{{ product.image1 }}"></a>
-                <a class="marg-top-20 pink-link" href="{{ product.get_absolute_url }}"><h5>{{ product.title }}</h5></a>    
+                <a class="marg-top-20 pink-link prod-title" href="{{ product.get_absolute_url }}"><h5>{{ product.title }}</h5></a>
                 <p class="product-block-price pink-text"><i class="fas fa-pound-sign pound-sign"></i>{{ product.price }}</p>
                 <!--Add to cart form--> 
                 <form method="post" action="{% url 'add_to_cart' product.id %}">

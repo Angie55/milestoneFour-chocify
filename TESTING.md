@@ -1,3 +1,17 @@
+## Testing
+
+### Automated testing
+
+The following validation services and linter were used to check the validity of the website code.
+
+- [W3C Markup Validation](https://validator.w3.org/)- used to validate HTML.
+
+- [W3C CSS validation](https://jigsaw.w3.org/css-validator/)- was used to validate CSS.
+
+- [JShint](https://jshint.com/)- was used to validate JavaScript.
+
+### Manual testing
+
 #### Navbar
 
 - The number of products added to the cart displays correctly and the badge only shows when there are items in the cart.
@@ -105,11 +119,6 @@ displayed on the search results. There is now just a header for all products and
 - Total displays under items.
 - Link to the checkout works if I’m logged in. If I’m not logged in I am taken to the login page.
 
-##### Future devs
-
-- A limit to quantity that can be added connected to stock levels for each product.
-- Add simple red cross button to remove cart items.
-
 #### Checkout
 
 - The correct products with the correct quantities display.
@@ -120,10 +129,6 @@ displayed on the search results. There is now just a header for all products and
 - Feedback displays if the expiry date is not valid.
 - I am redirected to the homepage an see an alert message that the payment was successful and my order will be processed shortly.
 - The order is visible on the admin page. 
-
-##### Future devs
-- Option to choose separate shipping address if different from billing.
-- Another payment option such as Paypal.
 
 #### Login
 
@@ -154,12 +159,8 @@ in the accounts view and amending that fixed the issue.
 
 ##### Bugs (fixed)
 - Alert displayed badly and the page does not go home. This has been resolved as on registering the user is taken to the
-home page where the alert displays well
+home page where the alert displays well.
 - Alert does not say I’m logged in. This has been fixed by amending the message to tell the user they have registered and are logged in.
-
-##### Future devs
-- Give the user the option to add an address and phone number as they register for easier checkout. They could edit this info in on
-their Profile page.
 
 #### Reset password
 
@@ -176,11 +177,6 @@ their Profile page.
 It now redirects the user to the homepage, this is not ideal but the message displays well. Potentially there could be no 
 feedback when the details are updated as you can see the changes in front of you but I think the feedback is required so the user gets
 clear feedback. They can easily go into the Profile again if they want to check.
-
-##### Future dev
-- Password reset link on this page too.
-- Order displays- This is something I had planned to add so users could see what they had ordered and if had been shipped. I added a 'Shipped' Boolean to the order
-model so an admin could tick it as it would display with the order summery.
 
 #### Contact us
 

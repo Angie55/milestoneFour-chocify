@@ -1,6 +1,7 @@
 $(document).ready(function () {
+    // Code required by emailJS to send email on submission
     const contactForm = document.querySelector('#contact-form');
-
+    
     contactForm.addEventListener('submit', (event) => {
         event.preventDefault();
         const data = {
@@ -29,7 +30,7 @@ $(document).ready(function () {
         });
     });
 
-
+    // Sweet alert pop up message if submission successful
     function contact_form_success(name) {
         let message = `Thank you ${name}.`;
         Swal.fire({
@@ -44,7 +45,7 @@ $(document).ready(function () {
             }
         });
     }
-
+    // Sweet alert pop up message if submission fails
     function contact_form_error() {
         let message = `Sorry!`;
         Swal.fire({
@@ -53,6 +54,6 @@ $(document).ready(function () {
             text: "Something went wrong with our contact form, please try again",
             showConfirmButton: false,
             timer: 3000,
-        })
+        });
     }
-})
+});

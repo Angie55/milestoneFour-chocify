@@ -39,31 +39,31 @@ required in browsing and purchasing products with each app.
     - [Wireframes](#wireframes)
 2. [Features](#features)
     - [Existing features](#existing-features)
-        - [Navbar](#nav)
+        - [Navbar](#navbar)
         - [Footer](#footer)
         - [Home](#home)
         - [All products](#all-products)
         - [Product details](#product-details)
         - [Products by category](#products-by-category)
+        - [Cart](#cart)
         - [Search results](#search-results)
         - [Checkout](#checkout)
         - [Login and Register](#login-and-register)
         - [Profile](#profile)
         - [Reset password](#reset-password)
         - [Contact us](#contact-us)
-        - [Cart](#cart)
+        
 
 3. [Information Architecture](#information-architecture)
     - [Databases](#databases)
     - [Data models](#data-models)
-    - [User](#user)
-    - [Category app model](#category-app-model)
-    - [Products app model](#products-app-model)
-    - [Order app model](#order-app-model)
+        - [User](#user)
+        - [Products app models](#products-app-models)
+        - [Order app models](#order-app-models)
 
 4. [Deployment](#deployment)
-
-
+        - [Run project locally](#run-project-locally)
+        - [Heroku Deployment](#heroku-deployment)
 
 ---
 
@@ -170,7 +170,7 @@ The blue and greens used for buttons are fairly standard to action buttons and t
 
 ### Wireframes
 
-- [Home](https://i.ibb.co/GtbHqtN/home.jpg)
+- [Home](https://i.ibb.co/GtbHqtN/home.jpg target="blank")
 - [Nav/Footer](https://i.ibb.co/0FSN8Qb/nav-footer.jpg)
 - [All Products](https://i.ibb.co/n7Rsy06/all-products.jpg)
 - [Search Results](https://i.ibb.co/3SJ48F0/search.jpg)
@@ -276,6 +276,11 @@ more or double check anything.
 
 - Checkout- Link only works of logged in, if they are not they are taken to the login page.
 
+##### Future devs
+
+- A limit to quantity that can be added connected to stock levels for each product.
+- Add simple red cross button to remove cart items.
+
 #### Checkout
 
 - Summery- of products added with image, price and quantity. 
@@ -286,6 +291,12 @@ more or double check anything.
 
 - Stripe- used for secure payment of products.
 
+##### Future devs
+- Option to choose separate shipping address if different from billing.
+- Postage options within the UK and worldwide. There would be various option for UK delivery such as standard, next day and selected day.
+Then a set rate for Europe and worldwide.
+- Another payment option such as Paypal.
+
 #### Login and Register
 
 - Form to login with links to register or reset password. 
@@ -293,11 +304,20 @@ more or double check anything.
 - Form to create an account- If valid once submitted it will create a new account for the user who will see the
 details in their profile page.
 
+##### Future devs
+
+- Give the user the option to add an address and phone number as they register for easier checkout. They could edit this info in on
+their Profile page.
+
 #### Profile
 
 - Displays current username and email on users account.
-
 - The form can be used to amend username or email or both.
+
+##### Future dev
+- Password reset link on this page too.
+- Order displays- This is something I had planned to add so users could see what they had ordered and if had been shipped. I added a 'Shipped' Boolean to the order
+model so an admin could tick it as it would display with the order summery.
 
 #### Reset password
 
@@ -318,12 +338,14 @@ When deployed, the SQL database provided by Heroku is a PostgreSQL database.
 
 For this project I used the standard user model by Django
 
-#### Category app model
+#### Products app models
+
+##### Category model
 
     name = models.CharField(max_length=100, default='')   
     image = models.ImageField(upload_to='images', default='')
 
-#### Products app model
+##### Product model
 
     category = models.ForeignKey(Category, null=True)
     title = models.CharField(max_length=150, default='')
@@ -340,7 +362,7 @@ For this project I used the standard user model by Django
     image3 = models.ImageField(upload_to='images', blank=True, null=True)
     image4 = models.ImageField(upload_to='images', blank=True, null=True)
 
-#### Checkout
+#### Checkout app model
 
     full_name = models.CharField(max_length=100, blank=False)
     phone_number = models.CharField(max_length=20, blank=False)
@@ -353,7 +375,22 @@ For this project I used the standard user model by Django
     date_ordered = models.DateField(default=datetime.date.today, null=True)
     shipped = models.BooleanField(default=False)
 
-#### OrderLineItem app model
+#### Order app models
+
+##### Order 
+
+    full_name = models.CharField(max_length=100, blank=False)
+    phone_number = models.CharField(max_length=20, blank=False)
+    street_address1 = models.CharField(max_length=50, blank=False)
+    street_address2 = models.CharField(max_length=50, blank=True)
+    town_or_city = models.CharField(max_length=40, blank=False)
+    county = models.CharField(max_length=40, blank=True)
+    postcode = models.CharField(max_length=10, blank=True)
+    country = models.CharField(max_length=40, blank=False)
+    date_ordered = models.DateField(default=datetime.date.today, null=True)
+    shipped = models.BooleanField(default=False)
+
+##### OrderLineItem 
 
     order = models.ForeignKey(Order, null=False)
     product = models.ForeignKey(Product, null=False)
@@ -396,7 +433,7 @@ For this project I used the standard user model by Django
 
 ## Deployment
 
-### Local deployment
+### Run project locally
 
 The following will need to be installed on your own system/IDE in order to run this project locally:
 
@@ -405,7 +442,7 @@ The following will need to be installed on your own system/IDE in order to run t
 - [Git](https://gist.github.com/derhuerst/1b15ff4652a867391f03)
 
 I used [Gitpod](https://www.gitpod.io/) as my chosen IDE and used this [Code Institute Full Template](https://github.com/Code-Institute-Org/gitpod-full-template)
-which hadd all of the tools preinstalled that I needed to get started.
+which had all of the tools preinstalled that I needed to get started.
 
 You will need to create free accounts on:
 - [Stripe](https://dashboard.stripe.com/register)

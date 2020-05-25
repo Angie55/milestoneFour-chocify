@@ -250,7 +250,7 @@ should let the user know that this username will not be saved and they should tr
 
 #### Other bugs
 
-Other bugs and issues not yet resolved:
+Other bugs and issues not yet resolved before submission:
 
 ##### Add to cart
 
@@ -269,6 +269,18 @@ coding in place this would be good to set up as a back up.
 For longer product titles, as the text wraps, it pushes the add to cart form down and is out of line with other products with shorter titles.
 This occurs on screen sizes from 768px to approx 1024px.
 
+#### Navbar (on safari)
+
+The navbar is displaying incorrectly in Safari, I had added a min height which I can see had taken effect on other browsers. I will need to
+investigate further into why this is happening as I have not found a soloution before submission.
+
+#### Cart page- amend quantity input (Firefox & Internet Explorer)
+
+The input field is very wide and makes the content overlap on certain sizes. 
+
+#### Cart and checkout product display (Firefox, Internet Explorer & Safari IPhoneSE) 
+
+The product display in not quite centered.
 
 ### User Story and Journey
 
@@ -290,3 +302,13 @@ This occurs on screen sizes from 768px to approx 1024px.
 - To be able to update my username or email address. √
 - To be able to reset my password if I forget.
 - To see clear feedback on actions taken whether they are successful or incorrect. √
+
+### Testing Matrix
+
+<div align="center">
+    <img src="https://i.ibb.co/yyry4Rm/device-browser-testing.png" alt="device-browser-testing" border="0">
+</div>
+
+<div align="center">
+    <img src="https://i.ibb.co/Vq0Z3vC/testing.png" alt="testing" border="0">
+</div>

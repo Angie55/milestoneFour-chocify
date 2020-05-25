@@ -3,6 +3,29 @@
 
 This is the testing write up for the main [README.md](README.md) file for the [Chocify](https://chocify-milestone-four.herokuapp.com/).
 
+1. [Automated testing](#automated-testing)
+
+2. [Travis](#travis)
+
+3. [Manual testing](#manual-testing)
+    - [Navbar](#navbar)
+    - [Footer](#footer)
+    - [Home](#home)
+    - [All products](#all-products)
+    - [Search results](#search-results)
+    - [Product details](#product-details)
+    - [Products by category](#products-by-category)
+    - [Cart](#cart)
+    - [Checkout](#checkout)
+    - [Login](#login)
+    - [Register](#register)
+    - [Reset password](#reset-password)
+    - [Profile](#profile)
+    - [Contact us](#contact-us)
+    - [Other bugs](#other-bugs)
+
+4. [User Story and Journey](#user-story-and-journey)
+
 ### Automated testing
 
 The following validation services and linter were used to check the validity of the website code.
@@ -138,7 +161,12 @@ displayed on the search results. There is now just a header for all products and
 - The form displays feedback if the card number or security code is incorrect. 
 - Feedback displays if the expiry date is not valid.
 - I am redirected to the homepage an see an alert message that the payment was successful and my order will be processed shortly.
-- The order is visible on the admin page. 
+- The order is visible on the admin page.
+
+##### Bugs (Not fixed)-
+
+- If the payment is unsuccessful or declined, the feedback will display poorly as the mssages where styles around the home page hero
+carousel. The needs to be a message alert styles for this page. It is still readable but will have a large gap above it.
 
 #### Login
 
@@ -165,7 +193,6 @@ in the accounts view and amending that fixed the issue.
 - I receive feedback if the password is too similar to the username.
 - I can clearly see a link to login if I already have an account.
 
-
 ##### Bugs (not fixed)
 - Lets me use the same email address as another account.
 
@@ -175,6 +202,14 @@ home page where the alert displays well.
 - Alert does not say I’m logged in. This has been fixed by amending the message to tell the user they have registered and are logged in.
 
 #### Reset password
+
+- Email can be entered on password reset page.
+- Email is clear and contains a link.
+- If the link is vaild the user goes to the page to set their new password.
+- If the link is invalid the user is informed and given a link to the password reset page.
+- The new passwords entered need to match or the user receives feedback.
+- The users sees confirmation the password has been changes and a link to login.
+- The login is successful with the new password.
 
 #### Profile
 
@@ -212,3 +247,46 @@ should let the user know that this username will not be saved and they should tr
 <div align="center">
     <img src="https://i.ibb.co/cyhHbJN/contact-email.jpg" alt="contact-email" border="0">
 </div>
+
+#### Other bugs
+
+Other bugs and issues not yet resolved:
+
+##### Add to cart
+
+Although the input to add an item to the cart has been set to give the user feedback if they try to submit without entering anything
+or a number larger than 0, i have found at times that sometimes the user sees an error page that the value must be larger than 0. It
+usually happens when the page has just been reached and often won’t happen a second time if you go back to the page. This will need
+further investigation and testing to ensure that the user never sees this error page.
+
+#### Error page
+
+An error page is required that would be the default for the user to see on any occasion where something goes wrong. Even with defensive
+coding in place this would be good to set up as a back up.
+
+#### Product title
+
+For longer product titles, as the text wraps, it pushes the add to cart form down and is out of line with other products with shorter titles.
+This occurs on screen sizes from 768px to approx 1024px.
+
+
+### User Story and Journey
+
+"**_A visitor/user to the Chocify website I want_** ____"
+
+- To see a professional looking site as soon as I land in the site. √
+- To quickly and easily know what the brand is about with links to information where I would expect them. √
+- Predictable navigation with all the links working and going where expected. √
+- It to be easy to hop back and forth between products, categories and the cart as I explore what is available. √
+- To be able to view the site with the same level of quality and experience whatever the size the device I am using is. √
+- To be able to view a range of products that are displayed is manageable chunks. √
+- To be able to clearly see the price and be able to add an item to cart without viewing the details if I choose. √
+- See clear images and more than one image for each products so I can see the details of what I am about to purchase. √
+- Be able to see a description, ingredients and chocolate types to help me decide and assess suitability for myself or whoever the gift of for. √
+- To see how many items I have added to my cart at all times. √
+- Search the site to try and find a specific item or see if something I have in mind exists. √
+- To be able to make contact easily with a simple form. √
+- See a clear list of items and prices in my cart and on the checkout page with totals before I pay. √
+- To be able to update my username or email address. √
+- To be able to reset my password if I forget.
+- To see clear feedback on actions taken whether they are successful or incorrect. √

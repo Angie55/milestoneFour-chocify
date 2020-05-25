@@ -77,6 +77,11 @@ required in browsing and purchasing products with each app.
     - [Run project locally](#run-project-locally)
     - [Heroku Deployment](#heroku-deployment)
 
+7. [Credits](#credits)
+    - [Content](#content)
+    - [Images](#images)
+    - [Code](#code)
+
 ---
 
 ## UX
@@ -333,6 +338,8 @@ model so an admin could tick it as it would display with the order summery.
 
 #### Reset password
 
+- User can reset their password by entering thier email to receive a link. Once they click the link and enter their new passowrd is updated.
+
 #### Contact us 
 
 - Form to send a message to the Chocify team using EmailJS, this currently sends an email to one of my email accounts so I could test it.
@@ -484,6 +491,14 @@ import os
 - os.environ.setdefault("AWS_ACCESS_KEY_ID", "**Enter key here**")
 - os.environ.setdefault("AWS_SECRET_ACCESS_KEY","**Enter key here**")
 
+For the password reset you can add the following environment variables but you will need a gmail account and to use
+your own email and the password to that account. You will also need to set your account to allow less secure apps to
+access your account. Please note this does not work in Gitpod and may not work in your chosen IDE, it will work if 
+you deploy to Heroku.
+
+- os.environ.setdefault("EMAIL_ADDRESS", "**Enter email here**")
+- os.environ.setdefault("EMAIL_PASSWORD","**Enter password here**")
+
 In settings.py remove the hashtag on import env at the top of the file so these keys can be accessed. Comment this
 out if you deploy to Heroku.
 
@@ -542,6 +557,8 @@ If you already have one, make sure you update it so it has all the requirments b
     - AWS_ACCESS_KEY_ID: "**Enter key here**"
     - AWS_SECRET_ACCESS_KEY: "**Enter key here**"
     - DISABLE_COLLECTSTATIC: "**1**"
+    - EMAIL_ADDRESS: "**Enter your email address**"
+    - EMAIL_PASSWORD: "**Enter password for email account**"
 
 - Go to 'Deploy', select 'Github' and search for your repository and 'Connect'.
 - You can go to 'Manual deploy' and 'Deploy Branch'. Once it has built you need to add it to
@@ -549,3 +566,42 @@ your allowed host in the 'Setting.py' to open it.
 - Open the app and type '/admin' at the end of the url. Login as the superuser with the details your used to
 create the superuser. You can create categories and add products here as well as view users and orders.
 
+## Credits
+
+### Content
+
+- All the content for products came from [Choc on choc](https://www.choconchoc.co.uk/) and [Schokolat](https://www.schokolat.co.uk/).
+- Content for the homes, terms, aboutus and privacy pages was taken from [Choc on choc](https://www.choconchoc.co.uk/) with the name
+of the company amended to Chocify.
+
+### Images
+
+- All the images for products, categories, hamepage hero's and the about us page came from [Choc on choc](https://www.choconchoc.co.uk/)
+and [Schokolat](https://www.schokolat.co.uk/).
+- The choc type images on the individual product pages came form [Pallas foods](https://www.pallasfoods.com/product/milk-chocolate-drops-34-5kg-pack/).
+
+### Code
+
+Alot of ideas and issues were googled with tips coming from a vast range of sources as i was getting my head around many things and how they would
+work fo my project. Below are some sources that although I always customised, I relied alot on the orginal code.
+
+- Product/Category model
+    - [Kwetuhub](https://blog.kwetuhub.com/creating-shop-app-designing-product-model-django-2-0-python-3-6/)
+
+- Pagination
+    - [Samuli Natri-Django - How To Add Pagination (Python Tutorial)](https://www.youtube.com/watch?v=Z8MDdDyB_6A)
+    - [Stackoverflow](https://stackoverflow.com/questions/53586089/paginator-object-has-no-attribute-get-page)
+
+- User profile update
+    - [Corey Schafer- Python Django Tutorial: Full-Featured Web App Part 9 - Update User Profile](https://www.youtube.com/watch?v=CQ90L5jfldw)
+
+- Product Thumbmail- click to make main
+    - [Design chemical](http://www.designchemical.com/blog/index.php/jquery/jquery-image-swap-gallery/)
+
+- Contact us email- I managed to get the email sending with just the EmailJS documentation but found Anna's project helpful as I was having trouble
+with how and what to use to display the success or error to the user.
+    - [EmailJS](https://www.emailjs.com/docs/)
+    - [Anna Greaves- Code Institute student](https://github.com/AJGreaves/thehouseofmouse/blob/master/static/js/emailjs.js)
+
+
+**Disclaimer - This project was created for educational purposes only**
